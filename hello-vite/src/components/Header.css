@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  padding: 10px 30px;
+  justify-content: space-between;
+}
+
+.header__home-button {
+  background: transparent;
+  border-color: white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin-left: auto;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.header__signin-button {
+  background: transparent;
+  padding: 10px 60px;
+  border-radius: 30px;
+  margin-left: 15px;
+  border-style: solid;
+  cursor: pointer;
+}

@@ -1,0 +1,53 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 30px 10px;
+  background-color: white;
+  margin-left: -30px;
+  width: 100%;
+}
+
+.footer__copyright {
+  color: rgba(182, 188, 191, 1);
+}
+
+.footer__home-button {
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  margin-top: 19px;
+  margin-left: auto;
+}
+
+.footer__tripleten-button {
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  margin-top: 19px;
+}
+
+.footer__github-button {
+  background-image: url(../assets/github.png);
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 15px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.footer__facebook-button {
+  background-image: url(../assets/facebook.png);
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 15px;
+  background-color: transparent;
+  cursor: pointer;
+}

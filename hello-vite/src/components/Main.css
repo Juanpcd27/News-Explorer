@@ -1,0 +1,29 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.main__title {
+  font-size: 60px;
+  text-align: center;
+  line-height: 64px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  max-width: 608px;
+  width: 100%;
+}
+
+.main__description {
+  margin: 0;
+}
+
+.cards__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  gap: 21px;
+}
