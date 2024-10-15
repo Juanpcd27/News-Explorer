@@ -1,6 +1,6 @@
 import "./Card.css";
 
-function Card(article, isLoggedIn) {
+function Card({ article, isLoggedIn }) {
   return (
     <div className="card__container">
       <h2 className="search__title">Search results</h2>

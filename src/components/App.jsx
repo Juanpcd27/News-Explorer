@@ -10,6 +10,8 @@ import { userRegistration, userSignin } from "../utils/auth";
 import { getToken, setToken, removeToken } from "../utils/token";
 import { fetchNews } from "../utils/newsApi";
 import { getItems } from "../utils/api";
+import SavedNews from "./SavedNews.jsx";
+import ProtectedRoute from "./ProtectedRoute.jsx";
 
 function App() {
   const [activeModal, setactiveModal] = useState("");
@@ -55,7 +57,6 @@ function App() {
   }, []);
 
   const handleRegistration = ({ email, password, username }) => {
-    setIsLoading(true);
     userRegistration(email, password, username)
       .then(() => {
         openSignInModal();
@@ -64,7 +65,6 @@ function App() {
   };
 
   const handlesignin = ({ email, password }) => {
-    setIsLoading(true);
     if (!email || !password) {
       return;
     }
@@ -74,7 +74,7 @@ function App() {
         if (data.token) {
           setToken(data.token);
           setIsLoggedIn(true);
-          // navigate("/saved-news");
+          navigate("/saved-news");
         }
       })
       .catch(console.error);
@@ -99,6 +99,12 @@ function App() {
       });
   };
 
+  const handleLogout = () => {
+    removeToken();
+    navigate("/");
+    setIsLoggedIn(false);
+  };
+
   return (
     <div className="app">
       <div className="app__content">
@@ -114,7 +120,25 @@ function App() {
               />
             }
           />
-          <Route path="/saved-news" />
+          <Route
+            path="/saved-news"
+            element={
+              <ProtectedRoute isLoggedIn={isLoggedIn}>
+                <SavedNews isLoggedIn={isLoggedIn} />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="*"
+            element={
+              isLoggedIn ? (
+                <Navigate to="/" replace />
+              ) : (
+                <Navigate to="/signin" replace />
+              )
+            }
+          />
         </Routes>
         <Footer />
       </div>
