@@ -73,6 +73,7 @@ function App() {
       .then((data) => {
         if (data.token) {
           setToken(data.token);
+          console.log(data);
           setIsLoggedIn(true);
           navigate("/saved-news");
         }

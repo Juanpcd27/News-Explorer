@@ -22,7 +22,7 @@ function SignInModal({
     }));
   };
 
-  const onsignin = () => {
+  const onsignin = (e) => {
     e.preventDefault();
     handlesignin(data);
     closeModal();
