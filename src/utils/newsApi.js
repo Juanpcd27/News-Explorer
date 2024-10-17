@@ -18,3 +18,15 @@ export const fetchNews = (query) => {
     .then(checkServerResponse)
     .then((data) => data.articles);
 };
+
+export const savedNews = (data) => {
+  const result = {};
+  result.name = data.name;
+  result.author = data.author;
+  result.source = data.source;
+  result.description = data.description;
+  result.urlToImage = data.urlToImage;
+  result.publishedAt = data.publishedAt;
+
+  return result;
+};

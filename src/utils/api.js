@@ -7,7 +7,7 @@ export const getItems = () => {
     resolve([
       {
         status: "ok",
-        totalResults: 4261,
+        totalResults: 10,
         articles: [
           {
             source: {

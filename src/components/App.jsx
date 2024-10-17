@@ -8,7 +8,7 @@ import RegisterModal from "./RegisterModal.jsx";
 import SignInModal from "./SignInModal.jsx";
 import { userRegistration, userSignin } from "../utils/auth";
 import { getToken, setToken, removeToken } from "../utils/token";
-import { fetchNews } from "../utils/newsApi";
+import { fetchNews, savedNews } from "../utils/newsApi";
 import { getItems } from "../utils/api";
 import SavedNews from "./SavedNews.jsx";
 import ProtectedRoute from "./ProtectedRoute.jsx";
@@ -52,6 +52,15 @@ function App() {
       .then((data) => {
         const articles = data[0].articles;
         setSavedArticles(articles);
+      })
+      .catch(console.error);
+  }, []);
+
+  useEffect(() => {
+    fetchNews()
+      .then((data) => {
+        const newsData = savedNews(data);
+        setSavedArticles(newsData);
       })
       .catch(console.error);
   }, []);
@@ -108,7 +117,7 @@ function App() {
 
   return (
     <div className="app">
-      <div className="app__content">
+      <div className="app__content app__saved-news">
         <Header openSignInModal={openSignInModal} isLoggedIn={isLoggedIn} />
         <Routes>
           <Route
@@ -122,11 +131,12 @@ function App() {
             }
           />
           <Route
+            id="app__content"
             path="/saved-news"
             element={
-              <ProtectedRoute isLoggedIn={isLoggedIn}>
-                <SavedNews isLoggedIn={isLoggedIn} />
-              </ProtectedRoute>
+              // <ProtectedRoute isLoggedIn={isLoggedIn}>
+              <SavedNews isLoggedIn={isLoggedIn} />
+              // </ProtectedRoute>
             }
           />
 

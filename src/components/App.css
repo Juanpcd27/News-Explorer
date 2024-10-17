@@ -1,6 +1,10 @@
 .app__content {
-  background-image: url(../assets/mainimage.png);
-  background-repeat: no-repeat;
   padding: 10px 30px;
   background-color: white;
+  background-image: url(../assets/mainimage.png);
+  background-repeat: no-repeat;
 }
+
+/* .app__saved-news {
+  background-image: none;
+} */

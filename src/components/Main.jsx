@@ -15,7 +15,9 @@ function Main({ isLoggedIn, cardItem, handleSearchNews }) {
       <section className="cards">
         <ul className="cards__list">
           {cardItem.map((article, index) => {
-            <Card key={index} article={article} isLoggedIn={isLoggedIn} />;
+            return (
+              <Card key={index} article={article} isLoggedIn={isLoggedIn} />
+            );
           })}
         </ul>
       </section>
