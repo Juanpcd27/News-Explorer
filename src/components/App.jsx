@@ -1,5 +1,11 @@
 import { useState, useEffect } from "react";
-import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  Navigate,
+  useNavigate,
+  useLocation,
+} from "react-router-dom";
 import "./App.css";
 import Header from "./Header.jsx";
 import Main from "./Main.jsx";
@@ -13,6 +19,7 @@ import { getItems } from "../utils/api";
 import SavedNews from "./SavedNews.jsx";
 import ProtectedRoute from "./ProtectedRoute.jsx";
 import Card from "./Card";
+import mainImg from "../assets/mainimage.png";
 
 function App() {
   const [activeModal, setactiveModal] = useState("");
@@ -47,6 +54,23 @@ function App() {
   }
 
   const navigate = useNavigate();
+
+  const location = useLocation();
+
+  const getBackgroundStyle = () => {
+    if (location.pathname === "/saved-news") {
+      return { backgroundImage: "none" };
+    }
+
+    return { backgroundImage: { mainImg } };
+  };
+
+  const getFontStyle = () => {
+    if (location.pathname === "/saved-news") {
+      return { color: "black" };
+    }
+    return { color: "white" };
+  };
 
   useEffect(() => {
     getItems()
@@ -118,7 +142,7 @@ function App() {
 
   return (
     <div className="app">
-      <div className="app__content app__saved-news">
+      <div className="app__content" style={getBackgroundStyle()}>
         <Header openSignInModal={openSignInModal} isLoggedIn={isLoggedIn} />
         <Routes>
           <Route

@@ -1,9 +1,7 @@
 .cards {
   margin-top: 40px;
-  padding-left: 0;
   margin-right: auto;
   display: flex;
-  padding: 10px 30px;
   justify-content: space-between;
   gap: 20px;
 }
@@ -16,7 +14,8 @@
 }
 
 .card__container {
-  margin-top: 90px;
+  margin-top: 50px;
+  padding: 10px 30px;
 }
 
 .search__title {
@@ -24,7 +23,6 @@
   font-weight: 400;
   font-size: 40px;
   line-height: 46px;
-  padding: 10px 30px;
 }
 
 .card__save {
@@ -70,9 +68,4 @@ li.card::marker {
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
-}
-
-@media screen and (max-width: 780px) {
-  .cards {
-  }
 }

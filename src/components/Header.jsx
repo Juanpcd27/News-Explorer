@@ -1,25 +1,38 @@
 import "./header.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Header({ openSignInModal, isLoggedIn }) {
+  const location = useLocation();
+
+  const getFontStyle = () => {
+    if (location.pathname === "/saved-news") {
+      return { color: "black" };
+    }
+    return { color: "white" };
+  };
+
   return (
-    <header className="header">
+    <header className="header" style={getFontStyle()}>
       <p className="header__title">NewsExplorer</p>
       <Link to="/">
-        <button className="header__home-button">Home</button>
+        <button className="header__home-button" style={getFontStyle()}>
+          Home
+        </button>
       </Link>
-      {isLoggedIn ? (
+      {location.pathname === "/saved-news" ? (
         <>
           <button className="saved__article-button"> Saved articles</button>
-          <Link to="/profile" className="header__link">
-            <div className="header__user-container">
-              <p className="header__username">{userData.name}</p>
-            </div>
-          </Link>
+          <div className="header__user-container">
+            <p className="header__username">Juan</p>
+          </div>
         </>
       ) : (
         <>
-          <button className="header__signin-button" onClick={openSignInModal}>
+          <button
+            className="header__signin-button"
+            onClick={openSignInModal}
+            style={getFontStyle()}
+          >
             Sign in
           </button>
         </>

@@ -13,6 +13,12 @@
   margin-left: auto;
   cursor: pointer;
   margin-top: 20px;
+  border: none;
+  margin-right: 10px;
+}
+
+.header__home-button:hover {
+  border-bottom: 1px solid;
 }
 
 .header__signin-button {
@@ -22,4 +28,31 @@
   margin-left: 15px;
   border-style: solid;
   cursor: pointer;
+}
+
+.saved__article-button {
+  background: transparent;
+  border: none;
+  color: black;
+  padding-bottom: 0;
+  cursor: pointer;
+  height: 20px;
+  margin-top: 19px;
+  margin-right: 10px;
+}
+
+.saved__article-button:hover {
+  border-bottom: 1px solid;
+}
+
+.header__username {
+  color: black;
+  border: none;
+  font-size: 14px;
+  margin-top: 19px;
+  cursor: pointer;
+}
+
+.header__username:hover {
+  border-bottom: 1px solid;
 }

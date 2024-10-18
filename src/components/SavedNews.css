@@ -1,6 +1,37 @@
+.saved__title {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 46px;
+  color: rgba(26, 27, 34, 1);
+}
+
+.saved__news {
+  padding: 10px 30px;
+}
+
 .saved__description {
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
   color: rgba(26, 27, 34, 0.5);
+}
+
+.saved__keywords {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: rgba(26, 27, 34, 1);
+}
+
+.saved__span {
+  font-weight: 700px bold;
+  font-size: 18px;
+  line-height: 24px;
+  color: rgba(26, 27, 34, 1);
+  margin-left: 5px;
+}
+
+.saved__text {
+  display: flex;
+  align-items: center;
 }
