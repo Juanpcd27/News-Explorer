@@ -13,6 +13,7 @@ function Main({ isLoggedIn, cardItem, handleSearchNews }) {
       </p>
       <SearchForm handleSearchNews={handleSearchNews} />
       <section className="cards">
+        <Card />
         <ul className="cards__list">
           {cardItem.map((article, index) => {
             return (

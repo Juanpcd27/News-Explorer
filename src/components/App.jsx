@@ -12,6 +12,7 @@ import { fetchNews, savedNews } from "../utils/newsApi";
 import { getItems } from "../utils/api";
 import SavedNews from "./SavedNews.jsx";
 import ProtectedRoute from "./ProtectedRoute.jsx";
+import Card from "./Card";
 
 function App() {
   const [activeModal, setactiveModal] = useState("");
@@ -56,14 +57,14 @@ function App() {
       .catch(console.error);
   }, []);
 
-  useEffect(() => {
-    fetchNews()
-      .then((data) => {
-        const newsData = savedNews(data);
-        setSavedArticles(newsData);
-      })
-      .catch(console.error);
-  }, []);
+  // useEffect(() => {
+  //   fetchNews()
+  //     .then((data) => {
+  //       const newsData = savedNews(data);
+  //       setSavedArticles(newsData);
+  //     })
+  //     .catch(console.error);
+  // }, []);
 
   const handleRegistration = ({ email, password, username }) => {
     userRegistration(email, password, username)
@@ -136,6 +137,7 @@ function App() {
             element={
               // <ProtectedRoute isLoggedIn={isLoggedIn}>
               <SavedNews isLoggedIn={isLoggedIn} />
+
               // </ProtectedRoute>
             }
           />
