@@ -26,7 +26,25 @@
 }
 
 .card__save {
-  margin: 0;
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 350px;
+  background-size: 30px;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  background-image: url(../assets/bookmark.svg);
+  background-repeat: none;
+  width: 35px;
+  height: 35px;
+}
+
+.card__save:hover {
+  background-image: url(../assets/black.svg);
+}
+
+.card__save:active {
+  background-image: url(../assets/blue.svg);
 }
 
 li.card::marker {
@@ -68,4 +86,10 @@ li.card::marker {
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .card__save {
+    margin-left: 120px;
+  }
 }

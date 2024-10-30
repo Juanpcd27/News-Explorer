@@ -76,7 +76,8 @@ function App() {
     getItems()
       .then((data) => {
         const articles = data[0].articles;
-        setSavedArticles(articles);
+        setCardItem(articles);
+        console.log(articles);
       })
       .catch(console.error);
   }, []);

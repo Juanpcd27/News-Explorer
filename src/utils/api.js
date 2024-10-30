@@ -57,7 +57,7 @@ export const getItems = () => {
             content:
               "By Stella Qiu\r\nSYDNEY (Reuters) - Asian shares were headed for the first weekly loss in five as the stunning rally in Chinese shares took a breather, although all eyes are on the details of the much-… [+3045 chars]",
           },
-          -{
+          {
             source: {
               id: null,
               name: "Biztoc.com",
