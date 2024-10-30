@@ -1,8 +1,5 @@
 .cards {
   margin-top: 40px;
-  margin-right: auto;
-  display: flex;
-  justify-content: space-between;
   gap: 20px;
 }
 
@@ -15,28 +12,19 @@
 
 .card__container {
   margin-top: 50px;
-  padding: 10px 30px;
-}
-
-.search__title {
-  color: rgba(26, 27, 34, 1);
-  font-weight: 400;
-  font-size: 40px;
-  line-height: 46px;
 }
 
 .card__save {
   position: absolute;
   margin-top: 20px;
-  margin-left: 350px;
   background-size: 30px;
   background-color: white;
   border-radius: 5px;
   cursor: pointer;
   background-image: url(../assets/bookmark.svg);
-  background-repeat: none;
   width: 35px;
   height: 35px;
+  left: 340px;
 }
 
 .card__save:hover {
@@ -90,6 +78,6 @@ li.card::marker {
 
 @media screen and (max-width: 768px) {
   .card__save {
-    margin-left: 120px;
+    left: 150px;
   }
 }

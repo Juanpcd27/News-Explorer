@@ -161,7 +161,7 @@ function App() {
             path="/saved-news"
             element={
               // <ProtectedRoute isLoggedIn={isLoggedIn}>
-              <SavedNews isLoggedIn={isLoggedIn} />
+              <SavedNews isLoggedIn={isLoggedIn} cardItem={cardItem} />
 
               // </ProtectedRoute>
             }

@@ -21,9 +21,29 @@
 
 .cards__list {
   display: flex;
-  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style-type: none;
   gap: 21px;
+}
+
+.search__title {
+  color: rgba(26, 27, 34, 1);
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 46px;
+  margin: 0;
+  padding-top: 100px;
+}
+
+.card__more {
+  max-width: 288px;
+  width: 100%;
+  border-radius: 20px;
+  border: none;
+  height: 64px;
+  cursor: pointer;
+  background-color: rgba(232, 232, 232, 1);
+  color: rgba(26, 27, 34, 1);
+  margin-top: 30px;
 }

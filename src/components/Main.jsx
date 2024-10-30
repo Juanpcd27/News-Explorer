@@ -13,6 +13,7 @@ function Main({ isLoggedIn, cardItem, handleSearchNews, article }) {
       </p>
       <SearchForm handleSearchNews={handleSearchNews} />
       <section className="cards">
+        <h2 className="search__title">Search results</h2>
         <ul className="cards__list">
           {cardItem.map((article, index) => {
             return (
@@ -21,6 +22,9 @@ function Main({ isLoggedIn, cardItem, handleSearchNews, article }) {
           })}
         </ul>
       </section>
+      <button className="card__more" type="button">
+        Show more
+      </button>
       <About />
     </main>
   );

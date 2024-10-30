@@ -57,22 +57,22 @@ export const getItems = () => {
             content:
               "By Stella Qiu\r\nSYDNEY (Reuters) - Asian shares were headed for the first weekly loss in five as the stunning rally in Chinese shares took a breather, although all eyes are on the details of the much-… [+3045 chars]",
           },
-          {
-            source: {
-              id: null,
-              name: "Biztoc.com",
-            },
-            author: "news.google.com",
-            title:
-              "Pfizer and Starboard Value, Tesla Robotaxi Day: Market Domination Overtime",
-            description:
-              "Pfizer and Starboard Value, Tesla Robotaxi Day: Market Domination Overtime Yahoo Finance\nPfizer’s stock dips after two former execs say they won’t support Starboard MarketWatch\nFormer Pfizer CEO, finance chief step back from Starboard's activist campaign CNBC…",
-            url: "https://biztoc.com/x/d8970282010cdb89",
-            urlToImage: "https://biztoc.com/cdn/803/og.png",
-            publishedAt: "2024-10-11T02:13:52Z",
-            content:
-              "Pfizer and Starboard Value, Tesla Robotaxi Day: Market Domination Overtime Yahoo FinancePfizers stock dips after two former execs say they wont support Starboard MarketWatchFormer Pfizer CEO, finance… [+130 chars]",
-          },
+          // {
+          //   source: {
+          //     id: null,
+          //     name: "Biztoc.com",
+          //   },
+          //   author: "news.google.com",
+          //   title:
+          //     "Pfizer and Starboard Value, Tesla Robotaxi Day: Market Domination Overtime",
+          //   description:
+          //     "Pfizer and Starboard Value, Tesla Robotaxi Day: Market Domination Overtime Yahoo Finance\nPfizer’s stock dips after two former execs say they won’t support Starboard MarketWatch\nFormer Pfizer CEO, finance chief step back from Starboard's activist campaign CNBC…",
+          //   url: "https://biztoc.com/x/d8970282010cdb89",
+          //   urlToImage: "https://biztoc.com/cdn/803/og.png",
+          //   publishedAt: "2024-10-11T02:13:52Z",
+          //   content:
+          //     "Pfizer and Starboard Value, Tesla Robotaxi Day: Market Domination Overtime Yahoo FinancePfizers stock dips after two former execs say they wont support Starboard MarketWatchFormer Pfizer CEO, finance… [+130 chars]",
+          // },
         ],
       },
     ])
