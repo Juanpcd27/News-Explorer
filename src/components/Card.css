@@ -1,0 +1,85 @@
+.cards {
+  margin-top: 40px;
+  gap: 20px;
+}
+
+.card {
+  max-width: 400px;
+  position: relative;
+  color: black;
+  width: 100%;
+}
+
+.card__container {
+  margin-top: 50px;
+}
+
+.card__save {
+  position: absolute;
+  margin-top: 20px;
+  background-size: 30px;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  background-image: url(../assets/bookmark.svg);
+  width: 35px;
+  height: 35px;
+  left: 340px;
+}
+
+.card__save:hover {
+  background-image: url(../assets/black.svg);
+}
+
+.card__save:active {
+  background-image: url(../assets/blue.svg);
+}
+
+li.card::marker {
+  color: transparent;
+}
+
+.card__title {
+  margin: 0;
+  background-color: #fff;
+  border-radius: 4px;
+  font-size: 26px;
+  color: rgba(26, 27, 34, 1);
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.card__image {
+  width: 100%;
+  border-style: solid;
+  border-radius: 19px;
+  border-color: rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  height: 272px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.card__date {
+  color: rgba(182, 188, 191, 1);
+  margin-top: 0;
+}
+
+.card__description {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(26, 27, 34, 1);
+}
+
+.card__source {
+  color: rgba(182, 188, 191, 1);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .card__save {
+    left: 150px;
+  }
+}

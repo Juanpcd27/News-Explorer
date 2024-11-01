@@ -1,0 +1,89 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+}
+
+.modal_opened {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+.modal__container {
+  background-color: white;
+  max-width: 430px;
+  border-radius: 20px;
+  padding: 40px;
+  box-sizing: border-box;
+  width: 100%;
+  padding-bottom: 35px;
+  padding-top: 15px;
+}
+
+.modal__close {
+  background-color: transparent;
+  font-size: 30px;
+  border: none;
+  position: absolute;
+  cursor: pointer;
+  margin-left: 400px;
+  margin-top: -60px;
+}
+
+.modal__title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  color: black;
+  font-size: 24px;
+}
+
+.modal__label-title {
+  margin-bottom: 10px;
+  color: rgba(47, 113, 229, 1);
+  font-size: 12px;
+}
+
+.modal__input {
+  display: block;
+  max-width: 440px;
+  width: 100%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: white;
+  color: black;
+}
+
+.modal__legend {
+  margin-bottom: 20px;
+  padding-top: 20px;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 1);
+  font-weight: bold;
+}
+
+.button__submit {
+  background-color: rgba(47, 113, 229, 1);
+  border: none;
+  width: 360px;
+  height: 64px;
+  color: rgba(255, 255, 255, 1);
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}

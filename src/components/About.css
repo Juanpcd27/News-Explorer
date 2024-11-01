@@ -1,0 +1,34 @@
+.about {
+  display: flex;
+  margin-top: 70px;
+  padding: 10px 30px;
+  background-color: white;
+  max-width: 1440px;
+  width: 100%;
+}
+
+.about__picture {
+  width: 464px;
+  height: 464px;
+  border-radius: 50%;
+  margin-top: 70px;
+}
+
+.about__text {
+  margin-left: 40px;
+  color: black;
+}
+
+.about__title {
+  max-width: 600px;
+  width: 100%;
+  font-size: 40px;
+  line-height: 46px;
+  font-weight: 400;
+}
+
+.about__description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
