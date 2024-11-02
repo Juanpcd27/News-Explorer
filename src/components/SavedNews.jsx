@@ -1,5 +1,5 @@
 import "./SavedNews.css";
-import Card from "./Card.jsx";
+import Card from "./src/components/Card.jsx";
 import { useLocation } from "react-router-dom";
 
 function SavedNews({ isLoggedIn, cardItem }) {
