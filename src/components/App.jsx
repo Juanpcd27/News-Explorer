@@ -7,16 +7,16 @@ import {
   useLocation,
 } from "react-router-dom";
 import "./App.css";
-import Header from ".src/components/Header.jsx";
-import Main from ".src/components/Main.jsx";
-import Footer from ".src/components/Footer.jsx";
-import RegisterModal from ".src/components/RegisterModal.jsx";
-import SignInModal from ".src/components/SignInModal.jsx";
-import { userRegistration, userSignin } from ".src/utils/auth.js";
-import { getToken, setToken, removeToken } from ".src/utils/token.js";
-import { fetchNews, savedNews } from ".src/utils/newsApi.js";
-import { getItems } from ".src/utils/api.js";
-import SavedNews from ".src/components/SavedNews.jsx";
+import Header from "./Header.jsx";
+import Main from "./Main.jsx";
+import Footer from "./Footer.jsx";
+import RegisterModal from "./RegisterModal.jsx";
+import SignInModal from "./SignInModal.jsx";
+import { userRegistration, userSignin } from "../utils/auth.js";
+import { getToken, setToken, removeToken } from "../utils/token.js";
+import { fetchNews, savedNews } from "../utils/newsApi.js";
+import { getItems } from "../utils/api.js";
+import SavedNews from "./SavedNews.jsx";
 // import ProtectedRoute from "./ProtectedRoute.jsx";
 import mainImg from "../assets/mainimage.png";
 

@@ -1,7 +1,7 @@
 import "./Main.css";
 import SearchForm from "./SearchForm.jsx";
-import About from "./src/components/About.jsx";
-import Card from "./src/components/Card.jsx";
+import About from "./About.jsx";
+import Card from "./Card.jsx";
 
 function Main({ isLoggedIn, cardItem, handleSearchNews, article }) {
   return (

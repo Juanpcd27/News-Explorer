@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ModalWithForm from ".src/components/ModalWithForm.jsx";
+import ModalWithForm from "./ModalWithForm.jsx";
 import "./SignInModal.css";
 
 function SignInModal({
