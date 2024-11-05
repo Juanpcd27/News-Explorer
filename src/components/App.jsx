@@ -166,7 +166,7 @@ function App() {
             }
           />
 
-          <Route
+          {/* <Route
             path="*"
             element={
               isLoggedIn ? (
@@ -175,7 +175,7 @@ function App() {
                 <Navigate to="/signin" replace />
               )
             }
-          />
+          /> */}
         </Routes>
         <Footer />
       </div>
