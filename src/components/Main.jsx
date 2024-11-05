@@ -2,6 +2,7 @@ import "./Main.css";
 import SearchForm from "./SearchForm.jsx";
 import About from "./About.jsx";
 import Card from "./Card.jsx";
+import { Link } from "react-router-dom";
 
 function Main({ isLoggedIn, cardItem, handleSearchNews, article }) {
   return (
@@ -22,9 +23,11 @@ function Main({ isLoggedIn, cardItem, handleSearchNews, article }) {
           })}
         </ul>
       </section>
-      <button className="card__more" type="button">
-        Show more
-      </button>
+      <Link className="card__link" to="/saved-news">
+        <button className="card__more" type="button">
+          Show more
+        </button>
+      </Link>
       <About />
     </main>
   );

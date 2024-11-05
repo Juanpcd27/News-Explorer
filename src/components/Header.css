@@ -12,7 +12,6 @@
   border-right: none;
   margin-left: auto;
   cursor: pointer;
-  margin-top: 20px;
   border: none;
   margin-right: 10px;
 }
@@ -37,7 +36,7 @@
   padding-bottom: 0;
   cursor: pointer;
   height: 20px;
-  margin-top: 19px;
+  margin-top: 23px;
   margin-right: 10px;
 }
 
@@ -49,10 +48,23 @@
   color: black;
   border: none;
   font-size: 14px;
-  margin-top: 19px;
+  margin-top: 23px;
   cursor: pointer;
 }
 
 .header__username:hover {
   border-bottom: 1px solid;
+}
+
+.header__link {
+  background: transparent;
+  border-color: white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin-left: auto;
+  cursor: pointer;
+  margin-top: 20px;
+  border: none;
+  margin-right: 10px;
 }

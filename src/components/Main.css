@@ -45,5 +45,16 @@
   cursor: pointer;
   background-color: rgba(232, 232, 232, 1);
   color: rgba(26, 27, 34, 1);
+}
+
+.card__link {
+  max-width: 288px;
+  width: 100%;
+  border-radius: 20px;
+  border: none;
+  height: 64px;
+  cursor: pointer;
+  background-color: rgba(232, 232, 232, 1);
+  color: rgba(26, 27, 34, 1);
   margin-top: 30px;
 }

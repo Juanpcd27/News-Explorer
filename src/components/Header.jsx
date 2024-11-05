@@ -14,7 +14,7 @@ function Header({ openSignInModal, isLoggedIn }) {
   return (
     <header className="header" style={getFontStyle()}>
       <p className="header__title">NewsExplorer</p>
-      <Link to="/">
+      <Link className="header__link" to="/">
         <button className="header__home-button" style={getFontStyle()}>
           Home
         </button>
