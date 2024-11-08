@@ -4,6 +4,12 @@
   justify-content: space-between;
 }
 
+.header__title {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+
 .header__home-button {
   background: transparent;
   border-color: white;
@@ -14,6 +20,9 @@
   cursor: pointer;
   border: none;
   margin-right: 10px;
+  font-family: "Roboto", serif;
+  font-weight: 500;
+  height: 48px;
 }
 
 .header__home-button:hover {
@@ -36,24 +45,40 @@
   padding-bottom: 0;
   cursor: pointer;
   height: 20px;
-  margin-top: 23px;
+  margin-top: 10px;
   margin-right: 10px;
+  height: 48px;
 }
 
 .saved__article-button:hover {
   border-bottom: 1px solid;
 }
 
-.header__username {
-  color: black;
-  border: none;
-  font-size: 14px;
-  margin-top: 23px;
-  cursor: pointer;
+.header__user-container {
+  display: flex;
+  border: 1px solid;
+  border-radius: 100px;
+  width: 112px;
+  height: 48px;
+  margin-top: 10px;
 }
 
-.header__username:hover {
-  border-bottom: 1px solid;
+.header__username {
+  color: black;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  margin-left: 23px;
+}
+
+.username__img {
+  background-size: contain;
+  width: 17.41px;
+  height: 16px;
+  border: none;
+  margin-top: 16px;
+  cursor: pointer;
 }
 
 .header__link {
@@ -64,7 +89,7 @@
   border-right: none;
   margin-left: auto;
   cursor: pointer;
-  margin-top: 20px;
+  margin-top: 10px;
   border: none;
   margin-right: 10px;
 }

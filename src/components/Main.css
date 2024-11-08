@@ -13,10 +13,14 @@
   margin-bottom: 10px;
   max-width: 608px;
   width: 100%;
+  font-family: "Roboto Slab", serif;
 }
 
 .main__description {
   margin: 0;
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-size: 18px;
 }
 
 .cards__list {
@@ -25,6 +29,9 @@
   padding: 0;
   list-style-type: none;
   gap: 21px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .search__title {
@@ -33,7 +40,9 @@
   font-size: 40px;
   line-height: 46px;
   margin: 0;
-  padding-top: 100px;
+  padding-top: 160px;
+  margin-right: auto;
+  font-family: "Roboto Slab", serif;
 }
 
 .card__more {

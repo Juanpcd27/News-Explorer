@@ -19,6 +19,7 @@ import { getItems } from "../utils/api.js";
 import SavedNews from "./SavedNews.jsx";
 // import ProtectedRoute from "./ProtectedRoute.jsx";
 import mainImg from "../assets/mainimage.png";
+import Preloader from "./Preloader.jsx";
 
 function App() {
   const [activeModal, setactiveModal] = useState("");
@@ -71,29 +72,11 @@ function App() {
     return { color: "white" };
   };
 
-  useEffect(() => {
-    getItems()
-      .then((data) => {
-        const articles = data[0].articles;
-        setCardItem(articles);
-        console.log(articles);
-      })
-      .catch(console.error);
-  }, []);
-
-  // useEffect(() => {
-  //   fetchNews()
-  //     .then((data) => {
-  //       const newsData = savedNews(data);
-  //       setSavedArticles(newsData);
-  //     })
-  //     .catch(console.error);
-  // }, []);
-
   const handleRegistration = ({ email, password, username }) => {
     userRegistration(email, password, username)
       .then(() => {
         openSignInModal();
+        setIsLoggedIn(true);
       })
       .catch(console.error);
   };
@@ -117,10 +100,12 @@ function App() {
 
   const handleSearchNews = (query) => {
     setIsLoading(true);
+    setIsSearched(true);
     fetchNews(query)
       .then((articles) => {
         if (articles.length === 0) {
           setIsNotFound(true);
+          setIsSearched(false);
         } else {
           setIsNotFound(false);
         }
@@ -144,6 +129,7 @@ function App() {
     <div className="app">
       <div className="app__content" style={getBackgroundStyle()}>
         <Header openSignInModal={openSignInModal} isLoggedIn={isLoggedIn} />
+
         <Routes>
           <Route
             path="/"
@@ -152,6 +138,9 @@ function App() {
                 isLoggedIn={isLoggedIn}
                 cardItem={cardItem}
                 handleSearchNews={handleSearchNews}
+                isSearched={isSearched}
+                isLoading={isLoading}
+                isNotFound={isNotFound}
               />
             }
           />
@@ -160,7 +149,11 @@ function App() {
             path="/saved-news"
             element={
               // <ProtectedRoute isLoggedIn={isLoggedIn}>
-              <SavedNews isLoggedIn={isLoggedIn} cardItem={cardItem} />
+              <SavedNews
+                isLoggedIn={isLoggedIn}
+                cardItem={cardItem}
+                isSearched={isSearched}
+              />
 
               // </ProtectedRoute>
             }

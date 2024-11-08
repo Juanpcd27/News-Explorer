@@ -2,9 +2,18 @@ import "./Main.css";
 import SearchForm from "./SearchForm.jsx";
 import About from "./About.jsx";
 import Card from "./Card.jsx";
+import Preloader from "./Preloader.jsx";
+import NotFound from "./NotFound.jsx";
 import { Link } from "react-router-dom";
 
-function Main({ isLoggedIn, cardItem, handleSearchNews, article }) {
+function Main({
+  isLoggedIn,
+  cardItem,
+  handleSearchNews,
+  isSearched,
+  isLoading,
+  isNotFound,
+}) {
   return (
     <main className="main">
       <h1 className="main__title">What's going on in the world?</h1>
@@ -13,8 +22,21 @@ function Main({ isLoggedIn, cardItem, handleSearchNews, article }) {
         account.
       </p>
       <SearchForm handleSearchNews={handleSearchNews} />
+      {isSearched ? (
+        <>
+          <h2 className="search__title">Search results</h2>
+        </>
+      ) : (
+        <></>
+      )}
+      {isLoading ? (
+        <>
+          <Preloader />
+        </>
+      ) : (
+        <></>
+      )}
       <section className="cards">
-        <h2 className="search__title">Search results</h2>
         <ul className="cards__list">
           {cardItem.map((article, index) => {
             return (
@@ -23,11 +45,24 @@ function Main({ isLoggedIn, cardItem, handleSearchNews, article }) {
           })}
         </ul>
       </section>
-      <Link className="card__link" to="/saved-news">
-        <button className="card__more" type="button">
-          Show more
-        </button>
-      </Link>
+      {isSearched ? (
+        <>
+          <Link className="card__link" to="/saved-news">
+            <button className="card__more" type="button">
+              Show more
+            </button>
+          </Link>
+        </>
+      ) : (
+        <></>
+      )}
+      {isNotFound ? (
+        <>
+          <NotFound />
+        </>
+      ) : (
+        <></>
+      )}
       <About />
     </main>
   );

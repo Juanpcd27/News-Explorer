@@ -1,5 +1,6 @@
 import "./header.css";
 import { Link, useLocation } from "react-router-dom";
+import usernameimg from "../assets/logout.svg";
 
 function Header({ openSignInModal, isLoggedIn }) {
   const location = useLocation();
@@ -23,7 +24,8 @@ function Header({ openSignInModal, isLoggedIn }) {
         <>
           <button className="saved__article-button"> Saved articles</button>
           <div className="header__user-container">
-            <p className="header__username">Juan</p>
+            <button className="header__username">Juan</button>
+            <img className="username__img" src={usernameimg}></img>
           </div>
         </>
       ) : (

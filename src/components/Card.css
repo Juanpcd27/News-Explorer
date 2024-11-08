@@ -47,6 +47,7 @@ li.card::marker {
   color: rgba(26, 27, 34, 1);
   line-height: 20px;
   font-weight: 400;
+  font-family: "Roboto Slab", serif;
 }
 
 .card__image {
@@ -63,12 +64,16 @@ li.card::marker {
 .card__date {
   color: rgba(182, 188, 191, 1);
   margin-top: 0;
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
 }
 
 .card__description {
   font-size: 16px;
   font-weight: 400;
   color: rgba(26, 27, 34, 1);
+  font-family: "Roboto", serif;
+  font-weight: 400;
 }
 
 .card__source {
@@ -76,10 +81,5 @@ li.card::marker {
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
-}
-
-@media screen and (max-width: 768px) {
-  .card__save {
-    left: 150px;
-  }
+  font-family: "Roboto Slab", serif;
 }
