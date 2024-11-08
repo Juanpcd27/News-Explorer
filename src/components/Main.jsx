@@ -22,13 +22,6 @@ function Main({
         account.
       </p>
       <SearchForm handleSearchNews={handleSearchNews} />
-      {isSearched ? (
-        <>
-          <h2 className="search__title">Search results</h2>
-        </>
-      ) : (
-        <></>
-      )}
       {isLoading ? (
         <>
           <Preloader />
@@ -36,6 +29,14 @@ function Main({
       ) : (
         <></>
       )}
+      {isSearched ? (
+        <>
+          <h2 className="search__title">Search results</h2>
+        </>
+      ) : (
+        <></>
+      )}
+
       <section className="cards">
         <ul className="cards__list">
           {cardItem.map((article, index) => {
