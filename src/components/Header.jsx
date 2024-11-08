@@ -25,7 +25,11 @@ function Header({ openSignInModal, isLoggedIn }) {
           <button className="saved__article-button"> Saved articles</button>
           <div className="header__user-container">
             <button className="header__username">Juan</button>
-            <img className="username__img" src={usernameimg}></img>
+            <img
+              className="username__img"
+              src={usernameimg}
+              alt="username-image"
+            ></img>
           </div>
         </>
       ) : (
