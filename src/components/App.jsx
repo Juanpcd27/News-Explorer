@@ -19,7 +19,7 @@ import { getItems } from "../utils/api.js";
 import SavedNews from "./SavedNews.jsx";
 // import ProtectedRoute from "./ProtectedRoute.jsx";
 import mainImg from "../assets/mainimage.png";
-import Preloader from "./Preloader.jsx";
+import SuccessModal from "./SuccessModal.jsx";
 
 function App() {
   const [activeModal, setactiveModal] = useState("");
@@ -45,6 +45,10 @@ function App() {
 
   function closeModal() {
     setactiveModal("");
+  }
+
+  function openSuccessModal() {
+    setactiveModal("success");
   }
 
   function handleEscKey(e) {
@@ -75,7 +79,8 @@ function App() {
   const handleRegistration = ({ email, password, username }) => {
     userRegistration(email, password, username)
       .then(() => {
-        openSignInModal();
+        openSuccessModal();
+        // openSignInModal();
         setIsLoggedIn(true);
       })
       .catch(console.error);
@@ -90,9 +95,8 @@ function App() {
       .then((data) => {
         if (data.token) {
           setToken(data.token);
-          console.log(data);
           setIsLoggedIn(true);
-          navigate("/saved-news");
+          // navigate("/saved-news");
         }
       })
       .catch(console.error);
@@ -128,7 +132,11 @@ function App() {
   return (
     <div className="app">
       <div className="app__content" style={getBackgroundStyle()}>
-        <Header openSignInModal={openSignInModal} isLoggedIn={isLoggedIn} />
+        <Header
+          openSignInModal={openSignInModal}
+          isLoggedIn={isLoggedIn}
+          logout={handleLogout}
+        />
 
         <Routes>
           <Route
@@ -185,6 +193,11 @@ function App() {
         opensignIn={openSignInModal}
         handleRegistration={handleRegistration}
         handleEscKey={handleEscKey}
+      />
+      <SuccessModal
+        isOpen={activeModal === "success"}
+        closeModal={closeModal}
+        opensignIn={openSignInModal}
       />
     </div>
   );

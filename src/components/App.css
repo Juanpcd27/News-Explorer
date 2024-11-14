@@ -1,10 +1,18 @@
+/* .app {
+  /* max-width: 2880px;
+  width: 100%; */
+
 .app__content {
   padding: 10px 30px;
   background-color: white;
   background-image: url(../assets/mainimage.png);
   background-repeat: no-repeat;
+  /* max-width: 2880px;
+  width: 100%; */
 }
 
-/* .app__saved-news {
-  background-image: none;
-} */
+@media screen and (max-width: 2560px) {
+  .app__content {
+    background-size: 2560px 600px;
+  }
+}

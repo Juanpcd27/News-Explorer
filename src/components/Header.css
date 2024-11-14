@@ -93,3 +93,16 @@
   border: none;
   margin-right: 10px;
 }
+
+.saved__button {
+  background: transparent;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+  border-color: white;
+  height: 48px;
+}
+
+.saved__button:hover {
+  border-bottom: 1px solid;
+}

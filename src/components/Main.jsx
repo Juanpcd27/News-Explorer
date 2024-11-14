@@ -5,6 +5,7 @@ import Card from "./Card.jsx";
 import Preloader from "./Preloader.jsx";
 import NotFound from "./NotFound.jsx";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 function Main({
   isLoggedIn,
@@ -14,6 +15,8 @@ function Main({
   isLoading,
   isNotFound,
 }) {
+  const [showMore, setShowMore] = useState(false);
+
   return (
     <main className="main">
       <h1 className="main__title">What's going on in the world?</h1>
@@ -31,28 +34,38 @@ function Main({
       )}
       {isSearched ? (
         <>
-          <h2 className="search__title">Search results</h2>
+          <h2 className="card__search-title">Search results</h2>
         </>
       ) : (
         <></>
       )}
 
       <section className="cards">
-        <ul className="cards__list">
-          {cardItem.map((article, index) => {
+        <div className="cards__list">
+          {cardItem.slice(0, 3).map((article, index) => {
             return (
               <Card key={index} article={article} isLoggedIn={isLoggedIn} />
             );
           })}
-        </ul>
+        </div>
       </section>
       {isSearched ? (
         <>
-          <Link className="card__link" to="/saved-news">
-            <button className="card__more" type="button">
-              Show more
-            </button>
-          </Link>
+          <div className="cards__list">
+            {showMore &&
+              cardItem.slice(3).map((article, index) => {
+                return (
+                  <Card key={index} article={article} isLoggedIn={isLoggedIn} />
+                );
+              })}{" "}
+          </div>
+          <button
+            className="card__more"
+            type="button"
+            onClick={() => setShowMore(true)}
+          >
+            Show more
+          </button>
         </>
       ) : (
         <></>

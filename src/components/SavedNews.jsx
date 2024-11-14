@@ -19,7 +19,7 @@ function SavedNews({ isLoggedIn, cardItem, isSearched }) {
           <></>
         )}
         <ul className="cards__list">
-          {cardItem.map((article, index) => {
+          {cardItem.slice(0, 3).map((article, index) => {
             return (
               <Card key={index} article={article} isLoggedIn={isLoggedIn} />
             );

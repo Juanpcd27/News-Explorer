@@ -83,3 +83,62 @@ li.card::marker {
   line-height: 20px;
   font-family: "Roboto Slab", serif;
 }
+
+@media screen and (max-width: 2560px) {
+  .cards {
+    max-width: 2560px;
+    width: 100%;
+  }
+
+  .card {
+    max-width: 800px;
+    width: 100%;
+  }
+
+  .card__image {
+    max-width: 800px;
+    width: 100%;
+  }
+
+  .card__container {
+    max-width: 750px;
+    width: 100%;
+  }
+
+  .card__save {
+    left: 680px;
+    top: 10px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .card {
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .card__container {
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .card__save {
+    left: 350px;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .card {
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .card__container {
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .card__save {
+    left: 350px;
+  }
+}

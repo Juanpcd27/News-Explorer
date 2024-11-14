@@ -2,7 +2,7 @@ import "./header.css";
 import { Link, useLocation } from "react-router-dom";
 import usernameimg from "../assets/logout.svg";
 
-function Header({ openSignInModal, isLoggedIn }) {
+function Header({ openSignInModal, isLoggedIn, logout }) {
   const location = useLocation();
 
   const getFontStyle = () => {
@@ -20,11 +20,25 @@ function Header({ openSignInModal, isLoggedIn }) {
           Home
         </button>
       </Link>
+      {isLoggedIn && location.pathname === "/" ? (
+        <>
+          <Link className="header__saved-button" to="/saved-news">
+            <button className="saved__button" type="button">
+              {" "}
+              Saved articles
+            </button>
+          </Link>
+        </>
+      ) : (
+        <></>
+      )}
       {location.pathname === "/saved-news" ? (
         <>
           <button className="saved__article-button"> Saved articles</button>
           <div className="header__user-container">
-            <button className="header__username">Juan</button>
+            <button className="header__username" type="submit" onClick={logout}>
+              Juan
+            </button>
             <img
               className="username__img"
               src={usernameimg}
