@@ -80,7 +80,6 @@ function App() {
     userRegistration(email, password, username)
       .then(() => {
         openSuccessModal();
-        // openSignInModal();
         setIsLoggedIn(true);
       })
       .catch(console.error);
@@ -96,7 +95,6 @@ function App() {
         if (data.token) {
           setToken(data.token);
           setIsLoggedIn(true);
-          // navigate("/saved-news");
         }
       })
       .catch(console.error);

@@ -54,7 +54,7 @@ li.card::marker {
   width: 100%;
   border-style: solid;
   border-radius: 19px;
-  border-color: rgba(0, 0, 0, 0.3);
+  border-color: transparent;
   max-width: 400px;
   height: 272px;
   border-bottom-left-radius: 0px;

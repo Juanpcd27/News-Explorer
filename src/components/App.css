@@ -16,3 +16,10 @@
     background-size: 2560px 600px;
   }
 }
+
+@media screen and (max-width: 320px) {
+  .app__content {
+    background-size: 320px 1120px;
+    padding: 5px;
+  }
+}

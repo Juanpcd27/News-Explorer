@@ -1,6 +1,7 @@
 import "./header.css";
 import { Link, useLocation } from "react-router-dom";
 import usernameimg from "../assets/logout.svg";
+import logoutwhite from "../assets/logoutwhite.svg";
 
 function Header({ openSignInModal, isLoggedIn, logout }) {
   const location = useLocation();
@@ -47,6 +48,30 @@ function Header({ openSignInModal, isLoggedIn, logout }) {
           </div>
         </>
       ) : (
+        <></>
+      )}
+      {isLoggedIn && location.pathname === "/" ? (
+        <>
+          <div className="header__user-container">
+            <button
+              className="header__username"
+              type="submit"
+              onClick={logout}
+              style={getFontStyle()}
+            >
+              Juan
+            </button>
+            <img
+              className="username__img"
+              src={logoutwhite}
+              alt="username-image"
+            ></img>
+          </div>
+        </>
+      ) : (
+        <></>
+      )}
+      {location.pathname === "/" && isLoggedIn === false ? (
         <>
           <button
             className="header__signin-button"
@@ -56,6 +81,8 @@ function Header({ openSignInModal, isLoggedIn, logout }) {
             Sign in
           </button>
         </>
+      ) : (
+        <></>
       )}
     </header>
   );
