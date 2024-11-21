@@ -20,6 +20,7 @@ import SavedNews from "./SavedNews.jsx";
 // import ProtectedRoute from "./ProtectedRoute.jsx";
 import mainImg from "../assets/mainimage.png";
 import SuccessModal from "./SuccessModal.jsx";
+import Navigation from "./Navigation.jsx";
 
 function App() {
   const [activeModal, setactiveModal] = useState("");
@@ -49,6 +50,10 @@ function App() {
 
   function openSuccessModal() {
     setactiveModal("success");
+  }
+
+  function openNavModal() {
+    setactiveModal("nav");
   }
 
   function handleEscKey(e) {
@@ -134,6 +139,7 @@ function App() {
           openSignInModal={openSignInModal}
           isLoggedIn={isLoggedIn}
           logout={handleLogout}
+          openNavModal={openNavModal}
         />
 
         <Routes>
@@ -197,6 +203,11 @@ function App() {
         closeModal={closeModal}
         opensignIn={openSignInModal}
       />
+      <Navigation
+        isOpen={activeModal === "nav"}
+        closeModal={closeModal}
+        opensignIn={openSignInModal}
+      ></Navigation>
     </div>
   );
 }

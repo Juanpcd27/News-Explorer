@@ -142,3 +142,14 @@ li.card::marker {
     left: 350px;
   }
 }
+
+@media screen and (max-width: 320px) {
+  .card__container {
+    padding: 10px;
+    margin-top: 0;
+  }
+
+  .card__save {
+    left: 220px;
+  }
+}

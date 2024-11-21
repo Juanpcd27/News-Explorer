@@ -1,9 +1,9 @@
 import "./header.css";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import usernameimg from "../assets/logout.svg";
 import logoutwhite from "../assets/logoutwhite.svg";
 
-function Header({ openSignInModal, isLoggedIn, logout }) {
+function Header({ openSignInModal, isLoggedIn, logout, openNavModal }) {
   const location = useLocation();
 
   const getFontStyle = () => {
@@ -16,19 +16,15 @@ function Header({ openSignInModal, isLoggedIn, logout }) {
   return (
     <header className="header" style={getFontStyle()}>
       <p className="header__title">NewsExplorer</p>
-      <Link className="header__link" to="/">
-        <button className="header__home-button" style={getFontStyle()}>
-          Home
-        </button>
-      </Link>
+      <a className="header__home-button" style={getFontStyle()} href="/">
+        Home
+      </a>
       {isLoggedIn && location.pathname === "/" ? (
         <>
-          <Link className="header__saved-button" to="/saved-news">
-            <button className="saved__button" type="button">
-              {" "}
-              Saved articles
-            </button>
-          </Link>
+          <a className="saved__button" href="/saved-news">
+            {" "}
+            Saved articles
+          </a>
         </>
       ) : (
         <></>
@@ -84,6 +80,11 @@ function Header({ openSignInModal, isLoggedIn, logout }) {
       ) : (
         <></>
       )}
+      <button
+        className="header__button-nav"
+        type="button"
+        onClick={openNavModal}
+      ></button>
     </header>
   );
 }

@@ -14,3 +14,9 @@
   color: rgba(47, 113, 229, 1);
   cursor: pointer;
 }
+
+@media screen and (max-width: 320px) {
+  .signup__button-redirect {
+    margin-left: 100px;
+  }
+}

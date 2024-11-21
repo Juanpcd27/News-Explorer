@@ -73,3 +73,27 @@
     margin-left: 55px;
   }
 }
+
+@media screen and (max-width: 320px) {
+  .card__search-title {
+    font-size: 30px;
+    margin-left: 10px;
+    padding-top: 60px;
+  }
+
+  .main__title {
+    font-size: 36px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+
+  .main {
+    margin-top: 0;
+  }
+
+  .main__description {
+    font-size: 18px;
+    line-height: 24px;
+    padding: 10px;
+  }
+}

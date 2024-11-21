@@ -43,3 +43,30 @@
   position: relative;
   right: 20px;
 }
+
+@media screen and (max-width: 320px) {
+  .search__label {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  .search__input {
+    max-width: 288px;
+    width: 100%;
+    height: 56px;
+    border-radius: 100px;
+  }
+
+  .submit__search-button {
+    max-width: 288px;
+    width: 100%;
+    height: 56px;
+    margin-left: 20px;
+  }
+
+  .search__form {
+    margin-top: 70px;
+  }
+}

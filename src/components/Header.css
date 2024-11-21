@@ -2,6 +2,9 @@
   display: flex;
   padding: 10px 30px;
   justify-content: space-between;
+  border-bottom: 1px solid;
+  border-color: gray;
+  padding-bottom: 0;
 }
 
 .header__title {
@@ -22,7 +25,10 @@
   margin-right: 10px;
   font-family: "Roboto", serif;
   font-weight: 500;
-  height: 48px;
+  height: 42px;
+  text-decoration: none;
+  margin-top: 25px;
+  margin-right: 50px;
 }
 
 .header__home-button:hover {
@@ -46,7 +52,7 @@
   cursor: pointer;
   height: 20px;
   margin-top: 10px;
-  margin-right: 10px;
+  margin-right: 25px;
   height: 48px;
 }
 
@@ -61,6 +67,7 @@
   width: 112px;
   height: 48px;
   margin-top: 10px;
+  margin-left: 20px;
 }
 
 .header__username {
@@ -97,28 +104,53 @@
 .saved__button {
   background: transparent;
   border: none;
-  margin-top: 10px;
+  margin-top: 26px;
   cursor: pointer;
   border-color: white;
-  height: 48px;
-  margin-right: 20px;
+  height: 32px;
+  margin-right: 50px;
+  text-decoration: none;
+  color: rgba(182, 188, 191, 1);
 }
 
 .saved__button:hover {
   border-bottom: 1px solid;
 }
 
+.header__button-nav {
+  display: none;
+}
+
 @media screen and (max-width: 320px) {
   .header__title {
     width: 117px;
     font-size: 16px;
+    margin-left: 10px;
   }
 
   .header {
     padding: 0;
+    border-bottom: 1px solid gray;
+  }
+
+  .header__button-nav {
+    display: flex;
+    margin-left: auto;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border: none;
+    background-image: url(../assets/menu.svg);
+    background-repeat: no-repeat;
+    margin-top: 18px;
+    margin-right: 10px;
+  }
+
+  .header__home-button {
+    display: none;
   }
 
   .header__signin-button {
-    padding: 0;
+    display: none;
   }
 }

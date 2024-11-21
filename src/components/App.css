@@ -19,7 +19,7 @@
 
 @media screen and (max-width: 320px) {
   .app__content {
-    background-size: 320px 1120px;
+    background-size: 320px 490px;
     padding: 5px;
   }
 }

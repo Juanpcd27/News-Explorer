@@ -1,20 +1,23 @@
 import "./Footer.css";
-import { Link } from "react-router-dom";
+import github from "../assets/github.png";
 
 function Footer() {
   return (
     <footer className="footer">
       <p className="footer__copyright">2024 Supersite, Powered by News API</p>
-      <Link className="link__footer" to="/">
-        <button className="footer__home-button">Home</button>
-      </Link>
-      <Link to="https://tripleten.com/">
-        <button className="footer__tripleten-button">TripleTen</button>
-      </Link>
-      <Link to="https://github.com/Juanpcd27/final-project-JPCD-frontend">
-        <button className="footer__github-button"></button>
-      </Link>
-      <button className="footer__facebook-button"></button>
+      <a className="footer__home-button" href="/">
+        Home
+      </a>
+
+      <a className="footer__tripleten-button" href="https://tripleten.com/">
+        TripleTen
+      </a>
+
+      <a
+        className="footer__github-button"
+        href="https://github.com/Juanpcd27/final-project-JPCD-frontend"
+      ></a>
+      <a className="footer__facebook-button" href="https://facebook.com"></a>
     </footer>
   );
 }

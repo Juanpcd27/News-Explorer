@@ -22,6 +22,7 @@
   margin-left: auto;
   font-family: "Roboto", serif;
   font-weight: 400;
+  text-decoration: none;
 }
 
 .link__footer {
@@ -37,6 +38,7 @@
   font-family: "Roboto", serif;
   font-weight: 400;
   margin-left: 20px;
+  text-decoration: none;
 }
 
 .footer__github-button {
@@ -67,14 +69,48 @@
 
 @media screen and (max-width: 320px) {
   .footer__copyright {
-    position: relative;
-    top: 40px;
     font-size: 16px;
-    width: 288px;
+    position: relative;
+    top: 140px;
+    left: 12px;
+    max-width: 288px;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 0;
   }
 
   .footer {
     position: relative;
-    bottom: 30px;
+    max-width: 320px;
+    width: 100%;
+    padding: 0;
+    height: 176px;
+    display: block;
+    margin-left: 0;
+  }
+
+  .footer__home-button {
+    position: relative;
+    left: 6px;
+  }
+
+  .footer__tripleten-button {
+    right: 58px;
+    top: 30px;
+    position: relative;
+  }
+
+  .footer__facebook-button {
+    position: relative;
+    left: 250px;
+    display: block;
+    bottom: 70px;
+  }
+
+  .footer__github-button {
+    position: relative;
+    left: 180px;
+    display: block;
+    bottom: 32px;
   }
 }
