@@ -1,9 +1,7 @@
 .footer {
   display: flex;
   justify-content: space-between;
-  padding: 30px 30px 10px;
   background-color: white;
-  margin-left: -30px;
   width: 100%;
 }
 
@@ -110,6 +108,54 @@
   .footer__github-button {
     position: relative;
     left: 180px;
+    display: block;
+    bottom: 32px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer__copyright {
+    font-size: 16px;
+    position: relative;
+    top: 120px;
+    left: 12px;
+    max-width: 480px;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 0;
+  }
+
+  .footer {
+    position: relative;
+    max-width: 480px;
+    width: 100%;
+    padding: 0;
+    height: 176px;
+    display: block;
+    margin-left: 0;
+  }
+
+  .footer__home-button {
+    position: relative;
+    left: 12px;
+  }
+
+  .footer__tripleten-button {
+    right: 52px;
+    top: 30px;
+    position: relative;
+  }
+
+  .footer__facebook-button {
+    position: relative;
+    left: 350px;
+    display: block;
+    bottom: 70px;
+  }
+
+  .footer__github-button {
+    position: relative;
+    left: 285px;
     display: block;
     bottom: 32px;
   }

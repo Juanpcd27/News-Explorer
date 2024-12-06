@@ -70,3 +70,30 @@
     margin-top: 70px;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .search__label {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  .search__input {
+    max-width: 480px;
+    width: 100%;
+    height: 56px;
+    border-radius: 100px;
+  }
+
+  .submit__search-button {
+    max-width: 480px;
+    width: 100%;
+    height: 56px;
+    margin-left: 20px;
+  }
+
+  .search__form {
+    margin-top: 70px;
+  }
+}

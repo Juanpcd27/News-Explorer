@@ -1,6 +1,7 @@
 .cards {
-  margin-top: 40px;
+  margin-top: 20px;
   gap: 20px;
+  background-color: rgba(245, 246, 247, 1);
 }
 
 .card {
@@ -8,6 +9,10 @@
   position: relative;
   color: black;
   width: 100%;
+  background-color: white;
+  border-bottom-right-radius: 19px;
+  border-bottom-left-radius: 19px;
+  border-bottom-style: inset;
 }
 
 .card__container {
@@ -151,5 +156,16 @@ li.card::marker {
 
   .card__save {
     left: 220px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card__container {
+    padding: 0px 20px;
+    margin-top: 0;
+  }
+
+  .card__save {
+    left: 320px;
   }
 }

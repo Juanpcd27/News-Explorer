@@ -32,15 +32,15 @@ function Main({
       ) : (
         <></>
       )}
-      {isSearched ? (
-        <>
-          <h2 className="card__search-title">Search results</h2>
-        </>
-      ) : (
-        <></>
-      )}
 
       <section className="cards">
+        {isSearched ? (
+          <>
+            <h2 className="card__search-title">Search results</h2>
+          </>
+        ) : (
+          <></>
+        )}
         <div className="cards__list">
           {cardItem.slice(0, 3).map((article, index) => {
             return (
@@ -48,28 +48,33 @@ function Main({
             );
           })}
         </div>
+        {isSearched ? (
+          <>
+            <div className="cards__list">
+              {showMore &&
+                cardItem.slice(3).map((article, index) => {
+                  return (
+                    <Card
+                      key={index}
+                      article={article}
+                      isLoggedIn={isLoggedIn}
+                    />
+                  );
+                })}{" "}
+              <button
+                className="card__more"
+                type="button"
+                onClick={() => setShowMore(true)}
+              >
+                Show more
+              </button>
+            </div>
+          </>
+        ) : (
+          <></>
+        )}
       </section>
-      {isSearched ? (
-        <>
-          <div className="cards__list">
-            {showMore &&
-              cardItem.slice(3).map((article, index) => {
-                return (
-                  <Card key={index} article={article} isLoggedIn={isLoggedIn} />
-                );
-              })}{" "}
-          </div>
-          <button
-            className="card__more"
-            type="button"
-            onClick={() => setShowMore(true)}
-          >
-            Show more
-          </button>
-        </>
-      ) : (
-        <></>
-      )}
+
       {isNotFound ? (
         <>
           <NotFound />

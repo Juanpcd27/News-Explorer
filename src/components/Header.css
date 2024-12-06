@@ -153,3 +153,25 @@
     display: none;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .header__home-button {
+    display: none;
+  }
+
+  .header__signin-button {
+    display: none;
+  }
+
+  .header__button-nav {
+    display: flex;
+    margin-left: auto;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border: none;
+    background-image: url(../assets/menu.svg);
+    background-repeat: no-repeat;
+    margin-top: 18px;
+  }
+}

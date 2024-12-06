@@ -1,7 +1,5 @@
 .about {
   display: flex;
-  margin-top: 70px;
-  padding: 10px 30px;
   background-color: rgba(255, 255, 255, 1);
   max-width: 2880px;
   width: 100%;
@@ -54,5 +52,40 @@
   .about__text {
     margin-left: 0;
     padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about__picture {
+    width: 272px;
+    height: 272px;
+    padding: 0 10px;
+    align-self: center;
+    margin-top: 20px;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    max-width: 480px;
+    width: 100%;
+    padding: 0;
+    margin-top: 0;
+  }
+
+  .about__text {
+    margin-left: 0;
+    padding: 0 10px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    font-family: "Roboto Slab", serif;
+  }
+
+  .about__title {
+    font-size: 30px;
+    line-height: 4px;
+    font-weight: 400;
+    font-family: "Roboto Slab", serif;
   }
 }

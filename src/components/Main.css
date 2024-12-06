@@ -40,7 +40,7 @@
   font-size: 40px;
   line-height: 46px;
   margin: 0;
-  padding-top: 160px;
+  padding-top: 30px;
   margin-right: auto;
   font-family: "Roboto Slab", serif;
 }
@@ -54,6 +54,7 @@
   cursor: pointer;
   background-color: rgba(232, 232, 232, 1);
   color: rgba(26, 27, 34, 1);
+  margin-bottom: 70px;
 }
 
 .card__link {
@@ -95,5 +96,29 @@
     font-size: 18px;
     line-height: 24px;
     padding: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main__title {
+    margin-top: 0;
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 400;
+    font-family: "Roboto Slab", serif;
+  }
+
+  .main__description {
+    font-size: 18px;
+    line-height: 24px;
+    padding-left: 15px;
+    font-family: "Roboto", serif;
+    font-weight: 400;
+  }
+
+  .card__search-title {
+    font-size: 30px;
+    margin-left: 20px;
+    padding-top: 60px;
   }
 }
