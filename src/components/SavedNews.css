@@ -6,10 +6,6 @@
   padding: 0 30px;
 }
 
-.saved__news {
-  /* padding: 10px 30px; */
-}
-
 .saved__description {
   font-weight: 400;
   font-size: 18px;
@@ -42,4 +38,21 @@
 .button__more {
   display: flex;
   justify-content: center;
+}
+
+.saved__card-delete {
+  position: absolute;
+  margin-top: 20px;
+  background-size: 30px;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  background-image: url(../assets/trash.svg);
+  width: 35px;
+  height: 35px;
+  left: 340px;
+}
+
+.saved__card-delete:hover {
+  background-image: url(../assets/trash2.svg);
 }

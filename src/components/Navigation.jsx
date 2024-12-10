@@ -1,7 +1,7 @@
 import "./Navigation.css";
 import { Link } from "react-router-dom";
 
-function Navigation({ isOpen, opensignIn, closeModal }) {
+function Navigation({ isOpen, opensignIn, closeModal, isLoggedIn }) {
   return (
     <nav className="nav">
       <div className={`modal__nav ${isOpen && "modal_opened"}`}>

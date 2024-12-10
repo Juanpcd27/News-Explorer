@@ -78,7 +78,7 @@
   margin-left: 23px;
 }
 
-.username__img {
+.header__username_img {
   background-size: contain;
   width: 17.41px;
   height: 16px;
@@ -128,7 +128,6 @@
   }
 
   .header {
-    padding: 0;
     border-bottom: 1px solid gray;
   }
 
@@ -152,11 +151,29 @@
   .header__signin-button {
     display: none;
   }
+
+  .saved__button {
+    margin-right: 0px;
+    margin-top: 10px;
+    margin-left: 18px;
+  }
+
+  .header__username {
+    margin-left: 12px;
+  }
+
+  .header__user-container {
+    margin-top: 0px;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .header__home-button {
     display: none;
+  }
+
+  .header {
+    padding: 10px;
   }
 
   .header__signin-button {
@@ -173,5 +190,9 @@
     background-image: url(../assets/menu.svg);
     background-repeat: no-repeat;
     margin-top: 18px;
+  }
+
+  .saved__button {
+    margin-right: 0;
   }
 }

@@ -9,15 +9,24 @@ function Footer() {
         Home
       </a>
 
-      <a className="footer__tripleten-button" href="https://tripleten.com/">
+      <a
+        className="footer__tripleten-button"
+        href="https://tripleten.com/"
+        target="_blank"
+      >
         TripleTen
       </a>
 
       <a
         className="footer__github-button"
         href="https://github.com/Juanpcd27/final-project-JPCD-frontend"
+        target="_blank"
       ></a>
-      <a className="footer__facebook-button" href="https://facebook.com"></a>
+      <a
+        className="footer__facebook-button"
+        href="https://facebook.com"
+        target="_blank"
+      ></a>
     </footer>
   );
 }

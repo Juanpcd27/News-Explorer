@@ -207,6 +207,7 @@ function App() {
         isOpen={activeModal === "nav"}
         closeModal={closeModal}
         opensignIn={openSignInModal}
+        isLoggedin={isLoggedIn}
       ></Navigation>
     </div>
   );

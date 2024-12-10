@@ -37,7 +37,7 @@ function Header({ openSignInModal, isLoggedIn, logout, openNavModal }) {
               Juan
             </button>
             <img
-              className="username__img"
+              className="header__username_img"
               src={usernameimg}
               alt="username-image"
             ></img>
@@ -58,7 +58,7 @@ function Header({ openSignInModal, isLoggedIn, logout, openNavModal }) {
               Juan
             </button>
             <img
-              className="username__img"
+              className="header__username_img"
               src={logoutwhite}
               alt="username-image"
             ></img>
@@ -80,11 +80,17 @@ function Header({ openSignInModal, isLoggedIn, logout, openNavModal }) {
       ) : (
         <></>
       )}
-      <button
-        className="header__button-nav"
-        type="button"
-        onClick={openNavModal}
-      ></button>
+      {isLoggedIn ? (
+        <></>
+      ) : (
+        <>
+          <button
+            className="header__button-nav"
+            type="button"
+            onClick={openNavModal}
+          ></button>
+        </>
+      )}
     </header>
   );
 }

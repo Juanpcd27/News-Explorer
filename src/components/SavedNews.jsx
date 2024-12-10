@@ -17,7 +17,7 @@ function SavedNews() {
         <div className="cards__list">
           <ul className="card__container">
             <li className="card">
-              <button className="card__save" type="button"></button>
+              <button className="saved__card-delete" type="button"></button>
               <img className="card__image" src={mercedes} alt="mercedes"></img>
               <p className="card__date">11/14/2024</p>
               <h3 className="card__title">Mercedes F1</h3>

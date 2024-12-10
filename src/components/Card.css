@@ -17,6 +17,7 @@
 
 .card__container {
   margin-top: 50px;
+  padding: 10px;
 }
 
 .card__save {
@@ -95,23 +96,7 @@ li.card::marker {
     width: 100%;
   }
 
-  .card {
-    max-width: 800px;
-    width: 100%;
-  }
-
-  .card__image {
-    max-width: 800px;
-    width: 100%;
-  }
-
-  .card__container {
-    max-width: 750px;
-    width: 100%;
-  }
-
   .card__save {
-    left: 680px;
     top: 10px;
   }
 }

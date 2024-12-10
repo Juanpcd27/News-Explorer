@@ -42,3 +42,13 @@
     left: 250px;
   }
 }
+
+@media screen and (max-width: 2560px) {
+  .preloader {
+    margin-top: 300px;
+  }
+
+  .preloader-text {
+    margin-left: 40px;
+  }
+}

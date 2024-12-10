@@ -9,6 +9,7 @@
   color: rgba(182, 188, 191, 1);
   font-family: "Roboto", serif;
   font-weight: 400;
+  margin-left: 10px;
 }
 
 .footer__home-button {
@@ -40,7 +41,7 @@
 }
 
 .footer__github-button {
-  background-image: url(../assets/github.png);
+  background-image: url(../assets/github.svg);
   width: 24px;
   height: 24px;
   border: none;
@@ -53,7 +54,7 @@
 }
 
 .footer__facebook-button {
-  background-image: url(../assets/facebook.png);
+  background-image: url(../assets/fb.svg);
   width: 24px;
   height: 24px;
   border: none;
@@ -63,6 +64,7 @@
   background-color: transparent;
   cursor: pointer;
   margin-left: 10px;
+  margin-right: 10px;
 }
 
 @media screen and (max-width: 320px) {
