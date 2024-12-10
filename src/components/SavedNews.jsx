@@ -32,7 +32,7 @@ function SavedNews() {
           </ul>
           <ul className="card__container">
             <li className="card">
-              <button className="card__save" type="button"></button>
+              <button className="saved__card-delete" type="button"></button>
               <img className="card__image" src={ferrari} alt="ferrari"></img>
               <p className="card__date">11/14/2024</p>
               <h3 className="card__title">Ferrari F1</h3>
@@ -48,7 +48,7 @@ function SavedNews() {
           </ul>
           <ul className="card__container">
             <li className="card">
-              <button className="card__save" type="button"></button>
+              <button className="saved__card-delete" type="button"></button>
               <img className="card__image" src={mclaren} alt="mclaren"></img>
               <p className="card__date">11/14/2024</p>
               <h3 className="card__title">McLaren F1</h3>
