@@ -82,7 +82,7 @@ function Header({ openSignInModal, isLoggedIn, logout, openNavModal }) {
       ) : (
         <></>
       )}
-      {isLoggedIn ? (
+      {isLoggedIn || location.pathname === "/saved-news" ? (
         <></>
       ) : (
         <>
