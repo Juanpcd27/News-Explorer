@@ -50,21 +50,9 @@
   background-image: url(../assets/trash.svg);
   width: 35px;
   height: 35px;
-  left: 340px;
+  right: 20px;
 }
 
 .saved__card-delete:hover {
   background-image: url(../assets/trash2.svg);
-}
-
-@media screen and (max-width: 480px) {
-  .saved__card-delete {
-    left: 315px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .saved__card-delete {
-    left: 210px;
-  }
 }

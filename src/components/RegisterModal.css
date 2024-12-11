@@ -14,15 +14,3 @@
   color: rgba(47, 113, 229, 1);
   cursor: pointer;
 }
-
-@media screen and (max-width: 320px) {
-  .signin__button-redirect {
-    margin-left: 105px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .signin__button-redirect {
-    margin-left: 154px;
-  }
-}

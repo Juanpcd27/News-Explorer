@@ -31,7 +31,7 @@
   gap: 21px;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .card__search-title {
@@ -40,8 +40,7 @@
   font-size: 40px;
   line-height: 46px;
   margin: 0;
-  padding-top: 30px;
-  margin-right: auto;
+  padding: 30px;
   font-family: "Roboto Slab", serif;
 }
 
@@ -59,6 +58,7 @@
   font-family: "Roboto", serif;
   font-size: 18px;
   line-height: 24px;
+  margin-top: 40px;
 }
 
 .card__link {
@@ -73,7 +73,7 @@
   margin-top: 30px;
 }
 
-@media screen and (max-width: 2560px) {
+/* @media screen and (max-width: 2560px) {
   .card__search-title {
     margin-left: 55px;
     display: flex;
@@ -84,29 +84,11 @@
   .cards__list {
     justify-content: center;
   }
-}
+} */
 
-@media screen and (max-width: 320px) {
-  .card__search-title {
-    font-size: 30px;
-    margin-left: 10px;
-    padding-top: 60px;
-  }
-
-  .main__title {
-    font-size: 36px;
-    margin-top: 20px;
-    line-height: 40px;
-  }
-
-  .main {
-    margin-top: 0;
-  }
-
+@media screen and (max-width: 530px) {
   .main__description {
-    font-size: 18px;
-    line-height: 24px;
-    padding: 10px;
+    padding-left: 15px;
   }
 }
 
@@ -131,5 +113,29 @@
     font-size: 30px;
     margin-left: 20px;
     padding-top: 60px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .card__search-title {
+    font-size: 30px;
+    margin-left: 10px;
+    padding-top: 60px;
+  }
+
+  .main__title {
+    font-size: 36px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+
+  .main {
+    margin-top: 0;
+  }
+
+  .main__description {
+    font-size: 18px;
+    line-height: 24px;
+    padding: 10px;
   }
 }

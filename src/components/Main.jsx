@@ -41,16 +41,16 @@ function Main({
         ) : (
           <></>
         )}
-        <div className="cards__list">
+        <ul className="cards__list">
           {cardItem.slice(0, 3).map((article, index) => {
             return (
               <Card key={index} article={article} isLoggedIn={isLoggedIn} />
             );
           })}
-        </div>
+        </ul>
         {isSearched ? (
           <>
-            <div className="cards__list">
+            <ul className="cards__list">
               {showMore &&
                 cardItem.slice(3).map((article, index) => {
                   return (
@@ -68,7 +68,7 @@ function Main({
               >
                 Show more
               </button>
-            </div>
+            </ul>
           </>
         ) : (
           <></>

@@ -2,6 +2,8 @@
   margin-top: 20px;
   gap: 20px;
   background-color: rgba(245, 246, 247, 1);
+  max-width: 1440px;
+  width: 100%;
 }
 
 .card {
@@ -10,19 +12,15 @@
   color: black;
   width: 100%;
   background-color: white;
-  border-bottom-right-radius: 19px;
-  border-bottom-left-radius: 19px;
   border-bottom-style: inset;
-}
-
-.card__container {
-  margin-top: 50px;
-  padding: 10px;
+  border: 1px solid;
+  border-color: transparent;
+  border-radius: 19px;
 }
 
 .card__save {
   position: absolute;
-  margin-top: 20px;
+  top: 24px;
   background-size: 30px;
   background-color: white;
   border-radius: 5px;
@@ -30,7 +28,7 @@
   background-image: url(../assets/bookmark.svg);
   width: 35px;
   height: 35px;
-  left: 340px;
+  right: 24px;
 }
 
 .card__save:hover {
@@ -54,17 +52,16 @@ li.card::marker {
   line-height: 20px;
   font-weight: 400;
   font-family: "Roboto Slab", serif;
+  padding: 0px 10px;
 }
 
 .card__image {
   width: 100%;
-  border-style: solid;
-  border-radius: 19px;
-  border-color: transparent;
   max-width: 400px;
   height: 272px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
+
+  border-top-left-radius: 19px;
+  border-top-right-radius: 19px;
 }
 
 .card__date {
@@ -72,6 +69,7 @@ li.card::marker {
   margin-top: 0;
   font-family: "Roboto Slab", serif;
   font-weight: 400;
+  padding: 10px;
 }
 
 .card__description {
@@ -80,6 +78,7 @@ li.card::marker {
   color: rgba(26, 27, 34, 1);
   font-family: "Roboto", serif;
   font-weight: 400;
+  padding: 0px 10px;
 }
 
 .card__source {
@@ -88,69 +87,11 @@ li.card::marker {
   font-size: 16px;
   line-height: 20px;
   font-family: "Roboto Slab", serif;
+  padding: 0px 10px;
 }
 
-@media screen and (max-width: 2560px) {
-  .cards {
-    max-width: 2560px;
-    width: 100%;
-  }
-
-  .card__save {
-    top: 10px;
-  }
-}
-
-@media screen and (max-width: 1440px) {
-  .card {
-    max-width: 400px;
-    width: 100%;
-  }
-
-  .card__container {
-    max-width: 400px;
-    width: 100%;
-  }
-
-  .card__save {
-    left: 350px;
-  }
-}
-
-@media screen and (max-width: 1600px) {
-  .card {
-    max-width: 400px;
-    width: 100%;
-  }
-
-  .card__container {
-    max-width: 400px;
-    width: 100%;
-  }
-
-  .card__save {
-    left: 350px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .card__container {
-    padding: 10px;
-    margin-top: 0;
-  }
-
-  .card__save {
-    left: 220px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .card__container {
-    padding: 0px 20px;
-    margin-top: 0;
-  }
-
+/* @media screen and (max-width: 420px) {
   .card__save {
     left: 320px;
   }
-}
+} */

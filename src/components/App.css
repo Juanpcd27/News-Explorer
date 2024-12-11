@@ -2,10 +2,12 @@
   background-color: white;
   background-image: url(../assets/mainimage.png);
   background-repeat: no-repeat;
-  object-fit: contain;
+  background-size: 100% 576px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
-@media screen and (max-width: 2560px) {
+/* @media screen and (max-width: 2560px) {
   .app__content {
     background-size: 2560px 600px;
   }
@@ -23,4 +25,4 @@
     background-size: 480px 490px;
     padding: 0px;
   }
-}
+} */

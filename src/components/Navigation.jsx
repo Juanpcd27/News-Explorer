@@ -1,5 +1,4 @@
 import "./Navigation.css";
-import { Link } from "react-router-dom";
 
 function Navigation({ isOpen, opensignIn, closeModal, isLoggedIn }) {
   return (
