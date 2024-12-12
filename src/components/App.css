@@ -2,7 +2,7 @@
   background-color: white;
   background-image: url(../assets/mainimage.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover 100% 560px;
   max-width: 1440px;
   margin: 0 auto;
   background-position-x: center;
