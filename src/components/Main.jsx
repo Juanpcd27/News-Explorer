@@ -36,7 +36,7 @@ function Main({
       <section className="cards">
         {isSearched ? (
           <>
-            <h2 className="card__search-title">Search results</h2>
+            <h2 className="cards-search__title">Search results</h2>
           </>
         ) : (
           <></>

@@ -15,7 +15,7 @@ function SearchForm({ handleSearchNews }) {
 
   return (
     <form className="search-form" onSubmit={onSearchNews}>
-      <label htmlFor="search-form" className="search__label">
+      <label htmlFor="search-form" className="search-form__label">
         <input
           className="search-form__input"
           type="search"

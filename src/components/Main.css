@@ -34,7 +34,7 @@
   justify-content: center;
 }
 
-.card__search-title {
+.cards-search__title {
   color: rgba(26, 27, 34, 1);
   font-weight: 400;
   font-size: 40px;
@@ -101,7 +101,7 @@
     font-weight: 400;
   }
 
-  .card__search-title {
+  .cards-search__title {
     font-size: 30px;
     margin-left: 20px;
     padding-top: 60px;
@@ -109,7 +109,7 @@
 }
 
 @media screen and (max-width: 320px) {
-  .card__search-title {
+  .cards-search__title {
     font-size: 30px;
     margin-left: 10px;
     padding-top: 60px;

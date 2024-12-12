@@ -6,7 +6,7 @@
   width: 100%;
 }
 
-.search__label {
+.search-form__label {
   width: 100%;
   display: flex;
 }
@@ -54,7 +54,7 @@
 }
 
 @media screen and (max-width: 480px) {
-  .search__label {
+  .search-form__label {
     display: flex;
     flex-direction: column;
     gap: 15px;
