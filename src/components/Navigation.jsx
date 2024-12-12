@@ -1,6 +1,7 @@
 import "./Navigation.css";
+import logoutwhite from "../assets/logoutwhite.svg";
 
-function Navigation({ isOpen, opensignIn, closeModal, isLoggedIn }) {
+function Navigation({ isOpen, opensignIn, closeModal, isLoggedin, logout }) {
   return (
     <nav className="nav">
       <div className={`modal__nav ${isOpen && "modal_opened"}`}>
@@ -17,9 +18,43 @@ function Navigation({ isOpen, opensignIn, closeModal, isLoggedIn }) {
             <a className="nav__home" href="/">
               Home
             </a>
-            <button className="nav__signin-button" onClick={opensignIn}>
-              Sign in
-            </button>
+            {isLoggedin ? (
+              <>
+                {" "}
+                <a
+                  className="saved__article-button"
+                  href="/final-project-JPCD-frontend/saved-news"
+                >
+                  {" "}
+                  Saved articles
+                </a>
+                <div className="header__user-container-nav">
+                  <button
+                    className="header__username-nav"
+                    type="submit"
+                    onClick={logout}
+                  >
+                    Juan
+                  </button>
+                  <img
+                    className="header__username_img-nav"
+                    src={logoutwhite}
+                    alt="username-image"
+                  ></img>
+                </div>
+              </>
+            ) : (
+              <></>
+            )}
+            {isLoggedin === false ? (
+              <>
+                <button className="nav__signin-button" onClick={opensignIn}>
+                  Sign in
+                </button>
+              </>
+            ) : (
+              <></>
+            )}
           </div>
         </div>
       </div>

@@ -208,6 +208,7 @@ function App() {
         closeModal={closeModal}
         opensignIn={openSignInModal}
         isLoggedin={isLoggedIn}
+        logout={handleLogout}
       ></Navigation>
     </div>
   );

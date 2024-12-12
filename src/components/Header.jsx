@@ -19,7 +19,7 @@ function Header({ openSignInModal, isLoggedIn, logout, openNavModal }) {
       <a className="header__home-button" style={getFontStyle()} href="/">
         Home
       </a>
-      {isLoggedIn && location.pathname === "/" ? (
+      {/* {isLoggedIn && location.pathname === "/" ? (
         <>
           <a
             className="header__saved-button"
@@ -30,8 +30,8 @@ function Header({ openSignInModal, isLoggedIn, logout, openNavModal }) {
         </>
       ) : (
         <></>
-      )}
-      {location.pathname === "/saved-news" ? (
+      )} */}
+      {isLoggedIn === false && location.pathname === "/saved-news" ? (
         <>
           <button className="saved__article-button"> Saved articles</button>
           <div className="header__user-container">
@@ -50,21 +50,11 @@ function Header({ openSignInModal, isLoggedIn, logout, openNavModal }) {
       )}
       {isLoggedIn && location.pathname === "/" ? (
         <>
-          <div className="header__user-container">
-            <button
-              className="header__username"
-              type="submit"
-              onClick={logout}
-              style={getFontStyle()}
-            >
-              Juan
-            </button>
-            <img
-              className="header__username_img"
-              src={logoutwhite}
-              alt="username-image"
-            ></img>
-          </div>
+          <button
+            className="header__button-nav"
+            type="button"
+            onClick={openNavModal}
+          ></button>
         </>
       ) : (
         <></>

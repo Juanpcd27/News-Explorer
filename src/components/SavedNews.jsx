@@ -1,5 +1,4 @@
 import "./SavedNews.css";
-import Card from "./Card.jsx";
 import ferrari from "../assets/ferrari.png";
 import mclaren from "../assets/mclaren.avif";
 import mercedes from "../assets/mercedes-f1-w15.jpg";

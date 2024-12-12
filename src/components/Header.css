@@ -42,6 +42,10 @@
   margin-left: 15px;
   border-style: solid;
   cursor: pointer;
+  line-height: 24px;
+  font-weight: 500;
+  font-size: 18px;
+  font-family: "Roboto", serif;
 }
 
 .saved__article-button {

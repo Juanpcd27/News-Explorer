@@ -11,8 +11,8 @@
   line-height: 64px;
   font-weight: 400;
   margin-bottom: 10px;
-  max-width: 608px;
-  width: 100%;
+  /* max-width: 608px;
+  width: 100%; */
   font-family: "Roboto Slab", serif;
 }
 
@@ -34,7 +34,7 @@
   justify-content: center;
 }
 
-.cards-search__title {
+.cards__search-title {
   color: rgba(26, 27, 34, 1);
   font-weight: 400;
   font-size: 40px;
