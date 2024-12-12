@@ -51,7 +51,7 @@
   border: none;
   height: 64px;
   cursor: pointer;
-  background-color: rgba(232, 232, 232, 1);
+  background-color: rgba(255, 255, 255, 1);
   color: rgba(26, 27, 34, 1);
   margin-bottom: 70px;
   font-weight: 500;
@@ -59,6 +59,10 @@
   font-size: 18px;
   line-height: 24px;
   margin-top: 40px;
+}
+
+.card__more:hover {
+  background-color: rgba(232, 232, 232, 1);
 }
 
 .card__link {
@@ -73,19 +77,6 @@
   margin-top: 30px;
 }
 
-/* @media screen and (max-width: 2560px) {
-  .card__search-title {
-    margin-left: 55px;
-    display: flex;
-    justify-content: center;
-    margin-right: 1070px;
-  }
-
-  .cards__list {
-    justify-content: center;
-  }
-} */
-
 @media screen and (max-width: 530px) {
   .main__description {
     padding-left: 15px;
@@ -99,6 +90,7 @@
     line-height: 40px;
     font-weight: 400;
     font-family: "Roboto Slab", serif;
+    padding: 0px 10px;
   }
 
   .main__description {
@@ -127,6 +119,7 @@
     font-size: 36px;
     margin-top: 20px;
     line-height: 40px;
+    padding: 0px 10px;
   }
 
   .main {

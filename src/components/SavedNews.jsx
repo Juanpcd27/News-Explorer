@@ -8,7 +8,7 @@ function SavedNews() {
   return (
     <div className="saved__news">
       <h3 className="saved__description">Saved articles</h3>
-      <h1 className="saved__title">Juan, you have 3 saved articles </h1>
+      <h2 className="saved__title">Juan, you have 3 saved articles </h2>
       <div className="saved__text">
         <p className="saved__keywords">By keywords:</p>
         <span className="saved__span">Mercedes, Ferrari, McLaren</span>

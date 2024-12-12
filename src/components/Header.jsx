@@ -22,7 +22,7 @@ function Header({ openSignInModal, isLoggedIn, logout, openNavModal }) {
       {isLoggedIn && location.pathname === "/" ? (
         <>
           <a
-            className="saved__button"
+            className="header__saved-button"
             href="/final-project-JPCD-frontend/saved-news"
           >
             Saved articles

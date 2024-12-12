@@ -1,7 +1,7 @@
 .about {
   display: flex;
   background-color: rgba(255, 255, 255, 1);
-  max-width: 2880px;
+  max-width: 1440px;
   width: 100%;
 }
 
@@ -16,6 +16,7 @@
 .about__text {
   margin-left: 40px;
   color: black;
+  padding-top: 50px;
 }
 
 .about__title {
@@ -34,31 +35,16 @@
   font-family: "Roboto", serif;
 }
 
-@media screen and (max-width: 2560px) {
+@media screen and (max-width: 1440px) {
   .about__picture {
-    margin-left: 100px;
+    margin-left: 10px;
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 680px) {
   .about__picture {
     width: 272px;
     height: 272px;
-    padding: 0 10px;
-  }
-
-  .about {
-    display: flex;
-    flex-direction: column;
-    max-width: 320px;
-    width: 100%;
-    padding: 0;
-    margin-top: 0;
-  }
-
-  .about__text {
-    margin-left: 0;
-    padding: 0 10px;
   }
 }
 
@@ -97,8 +83,24 @@
   }
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 320px) {
   .about__picture {
-    margin-left: 10px;
+    width: 272px;
+    height: 272px;
+    padding: 0 10px;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    width: 100%;
+    padding: 0;
+    margin-top: 0;
+  }
+
+  .about__text {
+    margin-left: 0;
+    padding: 0 10px;
   }
 }

@@ -100,7 +100,7 @@
   margin-right: 10px;
 }
 
-.saved__button {
+.header__saved-button {
   background: transparent;
   border: none;
   margin-top: 26px;
@@ -112,7 +112,7 @@
   color: rgba(182, 188, 191, 1);
 }
 
-.saved__button:hover {
+.header__saved-button:hover {
   border-bottom: 1px solid;
 }
 
@@ -152,54 +152,20 @@
     margin-top: 18px;
   }
 
-  .saved__button {
+  .header__saved-button {
     margin-right: 0;
   }
 }
 
-/* @media screen and (max-width: 320px) {
-  .header__title {
-    width: 117px;
-    font-size: 16px;
-    margin-left: 10px;
-  }
-
-  .header {
-    border-bottom: 1px solid gray;
-  }
-
-  .header__button-nav {
-    display: flex;
-    margin-left: auto;
-    width: 24px;
-    height: 24px;
-    background-color: transparent;
-    border: none;
-    background-image: url(../assets/menu.svg);
-    background-repeat: no-repeat;
+@media screen and (max-width: 360px) {
+  .header__saved-button {
     margin-top: 18px;
-    margin-right: 10px;
-  }
-
-  .header__home-button {
-    display: none;
-  }
-
-  .header__signin-button {
-    display: none;
-  }
-
-  .saved__button {
-    margin-right: 0px;
-    margin-top: 10px;
-    margin-left: 18px;
+    margin-left: 10px;
+    position: relative;
+    left: 10px;
   }
 
   .header__username {
-    margin-left: 12px;
+    margin-left: 15px;
   }
-
-  .header__user-container {
-    margin-top: 0px;
-  }
-} */
+}

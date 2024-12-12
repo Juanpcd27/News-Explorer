@@ -14,10 +14,10 @@ function SearchForm({ handleSearchNews }) {
   };
 
   return (
-    <form className="search__form" onSubmit={onSearchNews}>
+    <form className="search-form" onSubmit={onSearchNews}>
       <label htmlFor="search-form" className="search__label">
         <input
-          className="search__input"
+          className="search-form__input"
           type="search"
           name="search"
           placeholder="Enter topic"
@@ -25,7 +25,7 @@ function SearchForm({ handleSearchNews }) {
           value={query}
           onChange={handleChange}
         ></input>
-        <button className="submit__search-button" type="submit">
+        <button className="search-form__submit" type="submit">
           Search
         </button>
       </label>
