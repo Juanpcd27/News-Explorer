@@ -4,9 +4,9 @@ import aboutPhoto from "../assets/JL.jpeg";
 function About() {
   return (
     <section className="about">
-      <img className="about__picture" src={aboutPhoto}></img>
+      <img className="about__picture" src={aboutPhoto} alt="about-photo"></img>
       <div className="about__text">
-        <h1 className="about__title">About Juan Carrion</h1>
+        <h2 className="about__title">About Juan Carrion</h2>
         <p className="about__description">Talk about me etc.</p>
       </div>
     </section>

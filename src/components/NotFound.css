@@ -1,0 +1,35 @@
+.notFound {
+  max-width: 1440px;
+  width: 100%;
+  position: relative;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.notFound__title {
+  color: rgba(26, 27, 34, 1);
+  font-family: "Roboto Slab", serif;
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 30px;
+}
+
+.notFound__image {
+  background-image: url(../assets/notfound3.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 74px;
+  height: 74px;
+}
+
+.notFound__text {
+  color: rgba(182, 188, 191, 1);
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}

@@ -2,8 +2,21 @@ import "./Main.css";
 import SearchForm from "./SearchForm.jsx";
 import About from "./About.jsx";
 import Card from "./Card.jsx";
+import Preloader from "./Preloader.jsx";
+import NotFound from "./NotFound.jsx";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
-function Main({ isLoggedIn, cardItem, handleSearchNews, article }) {
+function Main({
+  isLoggedIn,
+  cardItem,
+  handleSearchNews,
+  isSearched,
+  isLoading,
+  isNotFound,
+}) {
+  const [showMore, setShowMore] = useState(false);
+
   return (
     <main className="main">
       <h1 className="main__title">What's going on in the world?</h1>
@@ -12,19 +25,63 @@ function Main({ isLoggedIn, cardItem, handleSearchNews, article }) {
         account.
       </p>
       <SearchForm handleSearchNews={handleSearchNews} />
+      {isLoading ? (
+        <>
+          <Preloader />
+        </>
+      ) : (
+        <></>
+      )}
+
       <section className="cards">
-        <h2 className="search__title">Search results</h2>
+        {isSearched ? (
+          <>
+            <h2 className="cards__search-title">Search results</h2>
+          </>
+        ) : (
+          <></>
+        )}
         <ul className="cards__list">
-          {cardItem.map((article, index) => {
+          {cardItem.slice(0, 3).map((article, index) => {
             return (
               <Card key={index} article={article} isLoggedIn={isLoggedIn} />
             );
           })}
         </ul>
+        {isSearched ? (
+          <>
+            <ul className="cards__list">
+              {showMore &&
+                cardItem.slice(3).map((article, index) => {
+                  return (
+                    <Card
+                      key={index}
+                      article={article}
+                      isLoggedIn={isLoggedIn}
+                    />
+                  );
+                })}{" "}
+              <button
+                className="card__more"
+                type="button"
+                onClick={() => setShowMore(true)}
+              >
+                Show more
+              </button>
+            </ul>
+          </>
+        ) : (
+          <></>
+        )}
       </section>
-      <button className="card__more" type="button">
-        Show more
-      </button>
+
+      {isNotFound ? (
+        <>
+          <NotFound />
+        </>
+      ) : (
+        <></>
+      )}
       <About />
     </main>
   );

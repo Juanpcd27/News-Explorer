@@ -12,14 +12,15 @@ import Main from "./Main.jsx";
 import Footer from "./Footer.jsx";
 import RegisterModal from "./RegisterModal.jsx";
 import SignInModal from "./SignInModal.jsx";
-import { userRegistration, userSignin } from "../utils/auth";
-import { getToken, setToken, removeToken } from "../utils/token";
-import { fetchNews, savedNews } from "../utils/newsApi";
-import { getItems } from "../utils/api";
+import { userRegistration, userSignin } from "../utils/auth.js";
+import { getToken, setToken, removeToken } from "../utils/token.js";
+import { fetchNews, savedNews } from "../utils/newsApi.js";
+import { getItems } from "../utils/api.js";
 import SavedNews from "./SavedNews.jsx";
-import ProtectedRoute from "./ProtectedRoute.jsx";
-import Card from "./Card";
+// import ProtectedRoute from "./ProtectedRoute.jsx";
 import mainImg from "../assets/mainimage.png";
+import SuccessModal from "./SuccessModal.jsx";
+import Navigation from "./Navigation.jsx";
 
 function App() {
   const [activeModal, setactiveModal] = useState("");
@@ -47,6 +48,14 @@ function App() {
     setactiveModal("");
   }
 
+  function openSuccessModal() {
+    setactiveModal("success");
+  }
+
+  function openNavModal() {
+    setactiveModal("nav");
+  }
+
   function handleEscKey(e) {
     if (e.key === "Escape") {
       return closeModal();
@@ -72,29 +81,11 @@ function App() {
     return { color: "white" };
   };
 
-  useEffect(() => {
-    getItems()
-      .then((data) => {
-        const articles = data[0].articles;
-        setCardItem(articles);
-        console.log(articles);
-      })
-      .catch(console.error);
-  }, []);
-
-  // useEffect(() => {
-  //   fetchNews()
-  //     .then((data) => {
-  //       const newsData = savedNews(data);
-  //       setSavedArticles(newsData);
-  //     })
-  //     .catch(console.error);
-  // }, []);
-
   const handleRegistration = ({ email, password, username }) => {
     userRegistration(email, password, username)
       .then(() => {
-        openSignInModal();
+        openSuccessModal();
+        setIsLoggedIn(true);
       })
       .catch(console.error);
   };
@@ -108,9 +99,7 @@ function App() {
       .then((data) => {
         if (data.token) {
           setToken(data.token);
-          console.log(data);
           setIsLoggedIn(true);
-          navigate("/saved-news");
         }
       })
       .catch(console.error);
@@ -118,10 +107,12 @@ function App() {
 
   const handleSearchNews = (query) => {
     setIsLoading(true);
+    setIsSearched(true);
     fetchNews(query)
       .then((articles) => {
         if (articles.length === 0) {
           setIsNotFound(true);
+          setIsSearched(false);
         } else {
           setIsNotFound(false);
         }
@@ -144,7 +135,13 @@ function App() {
   return (
     <div className="app">
       <div className="app__content" style={getBackgroundStyle()}>
-        <Header openSignInModal={openSignInModal} isLoggedIn={isLoggedIn} />
+        <Header
+          openSignInModal={openSignInModal}
+          isLoggedIn={isLoggedIn}
+          logout={handleLogout}
+          openNavModal={openNavModal}
+        />
+
         <Routes>
           <Route
             path="/"
@@ -153,6 +150,9 @@ function App() {
                 isLoggedIn={isLoggedIn}
                 cardItem={cardItem}
                 handleSearchNews={handleSearchNews}
+                isSearched={isSearched}
+                isLoading={isLoading}
+                isNotFound={isNotFound}
               />
             }
           />
@@ -161,13 +161,17 @@ function App() {
             path="/saved-news"
             element={
               // <ProtectedRoute isLoggedIn={isLoggedIn}>
-              <SavedNews isLoggedIn={isLoggedIn} cardItem={cardItem} />
+              <SavedNews
+                isLoggedIn={isLoggedIn}
+                cardItem={cardItem}
+                isSearched={isSearched}
+              />
 
               // </ProtectedRoute>
             }
           />
 
-          <Route
+          {/* <Route
             path="*"
             element={
               isLoggedIn ? (
@@ -176,7 +180,7 @@ function App() {
                 <Navigate to="/signin" replace />
               )
             }
-          />
+          /> */}
         </Routes>
         <Footer />
       </div>
@@ -194,6 +198,18 @@ function App() {
         handleRegistration={handleRegistration}
         handleEscKey={handleEscKey}
       />
+      <SuccessModal
+        isOpen={activeModal === "success"}
+        closeModal={closeModal}
+        opensignIn={openSignInModal}
+      />
+      <Navigation
+        isOpen={activeModal === "nav"}
+        closeModal={closeModal}
+        opensignIn={openSignInModal}
+        isLoggedin={isLoggedIn}
+        logout={handleLogout}
+      ></Navigation>
     </div>
   );
 }

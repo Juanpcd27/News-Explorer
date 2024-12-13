@@ -14,3 +14,17 @@
   color: rgba(47, 113, 229, 1);
   cursor: pointer;
 }
+
+@media screen and (max-width: 480px) {
+  .signup__button-redirect {
+    justify-content: right;
+  }
+}
+
+/* @media screen and (max-width: 320px) {
+  .signup__button-redirect {
+    margin-left: 110px;
+    display: flex;
+    justify-content: center;
+  }
+} */
