@@ -16,6 +16,7 @@ function SavedNews() {
         <div className="cards__list">
           <li className="card">
             <button className="saved__card-delete" type="button"></button>
+            <div className="card__hover">Remove from saved</div>
             <img className="card__image" src={mercedes} alt="mercedes"></img>
             <p className="card__date">11/14/2024</p>
             <h3 className="card__title">Mercedes F1</h3>
@@ -29,6 +30,7 @@ function SavedNews() {
           </li>
           <li className="card">
             <button className="saved__card-delete" type="button"></button>
+            <div className="card__hover">Remove from saved</div>
             <img className="card__image" src={ferrari} alt="ferrari"></img>
             <p className="card__date">11/14/2024</p>
             <h3 className="card__title">Ferrari F1</h3>
@@ -43,6 +45,7 @@ function SavedNews() {
           </li>
           <li className="card">
             <button className="saved__card-delete" type="button"></button>
+            <div className="card__hover">Remove from saved</div>
             <img className="card__image" src={mclaren} alt="mclaren"></img>
             <p className="card__date">11/14/2024</p>
             <h3 className="card__title">McLaren F1</h3>

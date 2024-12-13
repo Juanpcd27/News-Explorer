@@ -48,11 +48,44 @@
   border-radius: 5px;
   cursor: pointer;
   background-image: url(../assets/trash.svg);
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   right: 20px;
+  background-repeat: no-repeat;
+  border-style: none;
+  background-position: center;
 }
 
 .saved__card-delete:hover {
   background-image: url(../assets/trash2.svg);
+}
+
+.saved__card-delete:hover + .card__hover {
+  max-width: 182px;
+  width: 100%;
+  height: 40px;
+  background-size: 30px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  display: flex;
+  right: 65px;
+  top: 20px;
+  font-family: "Roboto", serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14.06px;
+  text-align: center;
+  color: rgba(0, 0, 0, 1);
+  justify-content: center;
+  align-items: center;
+}
+
+.card__hover {
+  display: none;
+  position: absolute;
+}
+
+.card__save:hover {
+  background-image: url(../assets/black.svg);
 }

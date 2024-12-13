@@ -29,6 +29,7 @@
   text-decoration: none;
   margin-top: 25px;
   margin-right: 50px;
+  font-size: 18px;
 }
 
 .header__home-button:hover {
@@ -58,6 +59,10 @@
   margin-top: 10px;
   margin-right: 25px;
   height: 48px;
+  font-family: "Roboto", serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
 }
 
 .saved__article-button:hover {
@@ -71,15 +76,23 @@
   width: 112px;
   height: 48px;
   margin-top: 10px;
+  font-family: "Roboto", serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
 }
 
 .header__username {
-  color: black;
+  color: white;
   font-size: 14px;
   cursor: pointer;
   background-color: transparent;
   border: none;
   margin-left: 23px;
+  font-family: "Roboto", serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
 }
 
 .header__username_img {
@@ -110,10 +123,14 @@
   margin-top: 26px;
   cursor: pointer;
   border-color: white;
-  height: 32px;
+  height: 42px;
   margin-right: 50px;
   text-decoration: none;
   color: rgba(182, 188, 191, 1);
+  font-family: "Roboto", serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
 }
 
 .header__saved-button:hover {
@@ -124,17 +141,11 @@
   display: none;
 }
 
-/* @media screen and (max-width: 530px) {
-  .saved__button {
-    margin-right: 0;
-  }
-} */
+.header__button-nav-news {
+  display: none;
+}
 
 @media screen and (max-width: 600px) {
-  .header__home-button {
-    display: none;
-  }
-
   .header {
     padding: 10px;
     justify-content: space-around;
@@ -144,6 +155,35 @@
     display: none;
   }
 
+  .header__button-nav {
+    display: none;
+  }
+
+  .saved__article-button {
+    margin-right: 20px;
+  }
+
+  .header__button-nav-news {
+    display: none;
+  }
+
+  .header__home-button {
+    margin-left: 20px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header__user-container {
+    display: none;
+  }
+
+  .header__saved-button {
+    display: none;
+  }
+  .saved__article-button {
+    display: none;
+  }
   .header__button-nav {
     display: flex;
     margin-left: auto;
@@ -156,12 +196,24 @@
     margin-top: 18px;
   }
 
-  .header__saved-button {
-    margin-right: 0;
+  .header__button-nav-news {
+    display: flex;
+    margin-left: auto;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border: none;
+    background-image: url(../assets/navblack.svg);
+    background-repeat: no-repeat;
+    margin-top: 18px;
   }
 
-  .saved__article-button {
-    margin-right: 0;
+  .header__home-button {
+    display: none;
+  }
+
+  .header__title {
+    margin-right: auto;
   }
 }
 

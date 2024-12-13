@@ -1,7 +1,10 @@
 import "./Navigation.css";
+import { useLocation } from "react-router-dom";
 import logoutwhite from "../assets/logoutwhite.svg";
 
 function Navigation({ isOpen, opensignIn, closeModal, isLoggedin, logout }) {
+  const location = useLocation();
+
   return (
     <nav className="nav">
       <div className={`modal__nav ${isOpen && "modal_opened"}`}>
@@ -22,7 +25,7 @@ function Navigation({ isOpen, opensignIn, closeModal, isLoggedin, logout }) {
               <>
                 {" "}
                 <a
-                  className="saved__article-button"
+                  className="saved__article-button-nav"
                   href="/final-project-JPCD-frontend/saved-news"
                 >
                   {" "}
@@ -46,6 +49,7 @@ function Navigation({ isOpen, opensignIn, closeModal, isLoggedin, logout }) {
             ) : (
               <></>
             )}
+
             {isLoggedin === false ? (
               <>
                 <button className="nav__signin-button" onClick={opensignIn}>
