@@ -1,3 +1,5 @@
+My project name is NewsExplorer.
+
 * I created a News Explorer website that allows you to search from any news located in the News API that's being fetched.
   
 * The news will be presented to the user in a card, displaying the searched news picture, title, description, date and time it was published and the source, the news will load in a set of 3 cards with an additional button to show more news.
