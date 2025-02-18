@@ -8,7 +8,7 @@ My project name is NewsExplorer.
 
 * This project is designed in a responsive way, meaning it can be accessed in any resolution.
 
-* The project is deployed with Github Pages and you can find the link for deployment here: https://juanpcd27.github.io/News-Explorer/
+* The project is deployed with Github Pages and you can find the link for deployment here: https://juanpcd27.github.io/final-project-JPCD-frontend/
 
 --- Technologies and skills used:
 
